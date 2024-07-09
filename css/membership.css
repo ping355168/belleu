@@ -12,7 +12,8 @@ main {
 .membership-container {
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    justify-content: space-between;
+
 }
 
 .membership-level {
@@ -44,6 +45,7 @@ main {
     background-position: center;
     background-repeat: no-repeat;
     padding: 30px 40px;
+    box-sizing: border-box;
 }
 
 .membership-level p {

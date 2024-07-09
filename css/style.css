@@ -379,3 +379,12 @@ footer img{
   }
   
   .pagination a:hover:not(.active) {background-color: #ddd;}
+
+
+.mySlides img{
+    width: 100%;
+}
+
+*{
+    box-sizing: border-box
+}
