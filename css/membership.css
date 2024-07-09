@@ -39,7 +39,7 @@ main {
 .benefits li {
     margin-top: 30px;
     font-size: 14px;
-    background-image: url(/img/coupon/coupon_原皮.png);
+    background-image: url(img/coupon/coupon_原皮.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -56,23 +56,23 @@ main {
 }
 
 .active-level #benefits_bronze{
-    background-image: url(/img/coupon/coupon_銅皮.png);
+    background-image: url(img/coupon/coupon_銅皮.png);
 }
 
 .active-level #benefits_silver{
-    background-image: url(/img/coupon/coupon_銀皮.png);
+    background-image: url(img/coupon/coupon_銀皮.png);
 }
 
 .active-level #benefits_gold{
-    background-image: url(/img/coupon/coupon_金皮.png);
+    background-image: url(img/coupon/coupon_金皮.png);
 }
 
 .active-level #benefits_platinum{
-    background-image: url(/img/coupon/coupon_鉑皮.png);
+    background-image: url(img/coupon/coupon_鉑皮.png);
 }
 
 .active-level #benefits_diamond{
-    background-image: url(/img/coupon/coupon_鑽皮.png);
+    background-image: url(img/coupon/coupon_鑽皮.png);
 }
 
 
