@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll to Section</title>
+    <link rel="stylesheet" href="./css/terms_of_use.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gaegu&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="marquee">
+        <p>下載app隨時領取最新優惠資訊！</p>
+    </div>
+<!---------------------- 頁首 ---------------------->
+    <header id="header">
+        <!---- 頁首左側 ---->
+        <div class="header_left">
+            <div class="LOGO">
+                <a href="./index.html">BELLEU</a>
+            </div>
+            <div class="header_buttons">
+                <div class="button">                
+                    <a href="./#">熱門商品</a>
+                </div>
+                <div class="button">   
+                    <a href="./new.html">最新商品</a>
+                </div>
+                <div class="button">   
+                    <a href="./1+1event.html">買一送一</a>
+                </div>
+                <div class="button">   
+                    <a href="./#">今天出發</a>
+                </div>
+                <div class="button">   
+                    <a href="./#">上身區</a>
+                    <div class="button_list">
+                        <a href="./">無袖上衣</a>
+                        <a href="./">短袖上衣</a>
+                        <a href="./">長袖上衣</a>
+                    </div>
+                </div>
+                <div class="button">   
+                    <a href="./#">下身區</a>
+                    <div class="button_list">
+                        <a href="./">短褲</a>
+                        <a href="./">短裙</a>
+                        <a href="./">長褲</a>
+                        <a href="./">長裙</a>
+                    </div>
+                </div>
+                <div class="button">   
+                    <a href="./#">全身區</a>
+                    <div class="button_list">
+                        <a href="./">連身裙</a>
+                        <a href="./">連身褲</a>
+                    </div>
+                </div>
+                <div class="button">   
+                    <a href="./#">配件</a>
+                    <div class="button_list">
+                        <a href="./">珠寶</a>
+                        <a href="./">裝飾品</a>
+                    </div>
+                </div>
+                <div class="button">   
+                    <a href="./#">鞋子</a>
+                    <div class="button_list">
+                        <a href="./">運動鞋</a>
+                        <a href="./">高跟鞋</a>
+                        <a href="./">平底鞋</a>
+                        <a href="./">拖鞋</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!---- 頁首右側 ---->
+        <div class="header_right">
+            <ul>
+                <li><input type="text"></li>
+                <li><i class="fa fa-search"></i></li>
+                <li><a href="./">登入</a></li>
+                <li><a href="./">註冊</a></li>
+            </ul>
+        </div>
+    </header>
+    <script>
+        window.addEventListener('scroll', function() {
+        let header = document.getElementById('header');
+        if (window.scrollY > 0) {
+        header.classList.add('scrolled');
+        } else {
+        header.classList.remove('scrolled');
+        }
+        });
+    </script>
+
+    <div class="menu">
+        <a href="./#section1">會員註冊</a>
+        <a href="./#section2">購物流程</a>
+        <a href="./#section3">配送及配送政策</a>
+        <a href="./#section4">退換貨政策</a>
+        <a href="./#section5">會員積分制度</a>
+        <a href="./#section6">聯絡我們</a>
+    </div>
+    <main>
+    <div class="title">使用條款</div>
+    <div id="section1" class="section">
+        <h2>一、會員註冊</h2>
+        <p>首先感謝您造訪我們的網站</p>
+        <p>BELLEU是採用會員制的品牌</p>
+        <p>在您使用BELLEU的服務時，請確保處於登入狀態。</p>
+        <p>您可以透過電子郵件、帳號或手機號碼以及密碼來建立帳戶。</p>
+        <p>非必要的資訊，BELLEU並不會強迫您輸入。</p>
+        <p>登入後，您將享受會員以及折扣活動</p>
+    </div>
+        <div id="section2" class="section">
+            <h2>二、購物流程</h2>
+            <p>1.您能透過商品分類或是搜索功能來找尋您感興趣的商品。</p>
+            <p>2.點擊商品圖片進入詳情頁面，查看商品信息。</p>
+            <p>3.選擇您喜歡的顏色、尺寸等選項後，將商品加入購物車。</p>
+            <p>4.在您結帳前，可以繼續查找商品。</p>
+            <p>5.結帳時，請填寫收件地址，並選擇配送方式與付款方式</p>
+            <p>6.依照提示完成付款，您將收到訂單確認電子郵件。</p>
+            <p>7.我們將在商品抵達前持續為您更新配送資訊。</p>
+        </div>
+        <div id="section3" class="section">
+            <h2>三、配送及配送政策</h2>
+            <p>配送公司：TibaMe 緯育物流</p>
+            <p>配送範圍：台澎金馬</p>
+            <p>配送運費：60元（消費滿1000元免運費）
+            <p>配送時間：1至7天</p>
+        </div>
+        <div id="section4" class="section">
+            <h2>四、退換貨政策</h2>
+            <p>購買前請仔細檢查顏色與尺碼，謹慎購買。</p>
+            <p>商品到貨後七日內，不滿意的商品您可以換貨與退貨。</p>
+            <p>不符合退貨政策的商品會有標註，請務必留意。</p>
+            <p>商品內容瑕疵或是錯誤，BELLEU將會提供免費換退貨服務。</p>
+            <p>若商品內容沒有錯誤，退換貨費用由客人承擔。</p>
+            <p>我們將在收到您的退換貨申請後進行處理，並通過電子郵件通知您相關信息。</p>
+
+        </div>
+        <div id="section5" class="section">
+            <h2>五、會員積分制度</h2>
+            <p>您每次購物可根據訂單金額獲得相應積分。</p>
+            <p>特定活動期間，購物可享受雙倍或更多積分獎勵。</p>
+            <p>積分可在結帳時抵扣部分金額，具體使用方式請參閱積分政策。</p>
+            <p>註冊滿六個月且會員達白金階級，我們將在您的生日為您送上好禮。</p>
+        </div>
+        <div id="section6" class="section">
+            <h2>六、聯絡我們</h2>
+            <p>如有任何問題，請隨時通過電子郵件（service@belleu.com.tw）或電話(TID)102-11-8939聯絡我們。</p>
+            <p>感謝您選擇 BELLEU 比露，祝您購物愉快！</p>
+        </div>
+    </main>
+    <script>
+        document.querySelectorAll('.menu a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                document.getElementById(targetId).scrollIntoView({
+                     behavior: 'smooth',
+                        block: 'start',
+                });
+            });
+        });
+    </script>
+            <footer>
+                <div class="top">
+                    <div class="footer_left">
+                        <div class="footer_left_top">
+                            <a href="./brand_introduce.html">關於比露</a>
+                            <a href="./membership.html">會員福利</a>
+                            <a href="./terms_of_use.html">使用條款</a>
+                            <a href="./privacy_policy.html">隱私權政策</a>
+                            <a href="./#">實體店面</a>
+                            <a href="./store_information.html">加入我們</a>
+                        </div>
+                        <div class="company_name">
+                            <p>BELLEU</p>
+                            <h1>比露服飾無限公司</h1>
+                        </div>
+                    </div>
+                    <div class="footer_right">
+                        <div class="right_top">
+                            <h1>客服中心：(TID)102-11-8939</h1>
+                            <h1>電子郵件：service@belleu.com.tw </h1>
+                        </div>
+                        <div class="right_bottom"> 
+                            <h2>平日（週一至週五）13:00-22:00</h2>
+                            <h2>例假日（週六、週日及國定假日）10:00-24:00</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="company_information">
+                    <p>負責人鄭丞恩</p>
+                    <p>新北市啵啵區嘻嘻路102街11號</p>
+                    <p>統編 102118939 </p>
+                    <p>本網站僅供網站設計學習用途 如有侵權請聯絡 ping355168@gmail.com</p>
+                </div>
+            </footer>
+</body>
+</html>

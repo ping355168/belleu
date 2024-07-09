@@ -1,0 +1,205 @@
+@import url(reset.css);
+
+@import url(style.css);
+
+/* 看板區*/
+.slideshow-container{
+    box-sizing:border-box;
+    position: relative;
+}
+
+.slideshow-container img{
+    -webkit-user-drag: none;
+    width: 100%;
+}
+
+.mySlides {
+    display: none;
+  }
+
+.slideshow-container>.prev, .slideshow-container>.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    user-select: none;
+}
+
+.slideshow-container>.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.slideshow-container>.prev {
+    left: 0;
+    border-radius: 0 3px 3px 0;
+}
+
+.slideshow-container>.prev:hover, .slideshow-container>.next:hover {
+background-color: rgba(0,0,0,0.8);
+}
+
+/*----------------------品牌介紹----------------------*/
+.brand_introduction{
+    width: 100vw;
+    box-sizing: border-box;
+    padding: 100px 150px;
+    position: relative;
+    background-color: #F6F4EE;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.brand_introduction_text_area{
+    text-align: center;
+    color: #736B60;
+}
+
+.brand_introduction_text_area h1{
+    font-size: 16px;
+    line-height: 23px;
+    font-weight: bold;
+
+}
+.brand_introduction_text_area p{
+    font-size: 14px;
+    line-height: 20px;
+}
+.event_show img{
+    width: 230px;
+    margin-bottom: 5px;
+    -webkit-user-drag: none;
+    display: flex;
+}
+.event_show p{
+    font-size: 12px;
+    line-height: 17px;
+}
+
+.event_show{
+    color: #4B4237;
+    text-decoration: none;
+}
+
+.event_show a{
+    user-select: none;
+}
+.event_show_slide{
+    width: 100%;
+    height: auto;
+    gap: 20px;
+    display: flex;
+    overflow: hidden;
+}
+
+.prev, .next {
+    top: 50%;
+    margin-top: 22px;
+}
+
+
+.app i{
+    color: #4B4237;
+}
+
+.map_and_app{
+    background-color: #F6F4EE;
+    padding: 60px 150px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+iframe{
+    display: block;
+    width: 600px;
+    height: 350px;
+    border: 4px solid #4B4237;
+    border-radius: 12px;
+}
+
+.information h1{
+    font-size: 18px;
+    color: #4B4237;
+    font-weight: bold;
+}
+.information{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.information h2{
+    font-size: 14px;
+}
+
+.information a{
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    box-sizing: border-box;
+    padding: 10px 15px;
+    background-color: white;
+    border:2px solid #4B4237 ;
+    color: #4B4237;
+    text-decoration: none;
+    justify-content: center;
+    text-align: center;
+    width: 120px;
+    border-radius: 8px;
+}
+
+.app{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 40px;
+}
+.information a i{
+    margin-right: 10px;
+}
+
+.information h3{
+    font-size: 14px;
+    font-weight: bold;
+    color: #4B4237;
+}
+
+.information img{
+    width: 100px;
+}
+
+.download{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.download a:hover i,.download a:hover p{
+    color: white;
+}
+
+.download a:hover{
+    background-color: #4B4237;
+}
+
+.app_download{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.store_information{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}

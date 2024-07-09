@@ -1,0 +1,67 @@
+@import url(reset.css);
+
+@import url(style.css);
+
+
+.menu {
+    position: fixed;
+    top: 200px;
+    left: 10%;
+}
+
+header{
+    background: none;
+    background-color: #F6F4EE;
+    color: #4B4237;
+    border-bottom: 1px solid #999; 
+}
+
+.button a,.header_right li a{
+    text-decoration: none;
+    color: #4B4237;
+}
+.LOGO a{
+    color: #4B4237;
+}
+
+.menu a {
+    display: block;
+    margin: 5px 0;
+    cursor: pointer;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+.section {
+    display: block;
+    padding: 40px 10px 10px;
+
+}
+main{
+    padding: 100px 150px 200px;
+    margin-left: 15%;
+}
+
+.title{
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    color: #4B4237;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #4B4237;
+}
+
+.section h2{
+    font-weight: bold;
+    border-top: 1px solid #ccc;
+    padding: 40px 0;
+    font-size: 18px;
+    color: #4B4237;
+}
+.section p{
+    font-size: 14px;
+    color: #736B60;
+    margin-bottom: 20px;
+}

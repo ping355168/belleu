@@ -1,0 +1,145 @@
+
+@import url(reset.css);
+@import url(style.css);
+
+main {
+    padding: 60px 150px;
+    background-color: #F6F4EE;
+    color: #4B4237;
+    text-align: center;
+}
+
+.membership-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.membership-level {
+    width: 180px;
+    padding: 30px 10px;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+.membership-level img {
+    width: 50%;
+    margin-bottom: 10px;
+}
+
+.active-level {
+    background-color: #EDEDED;
+    color: white;
+}
+
+.active-level h3, .active-level p{
+    color: #4B4237;
+}
+
+.benefits li {
+    margin-top: 30px;
+    font-size: 14px;
+    background-image: url(../img/coupon_0.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 30px 40px;
+}
+
+.membership-level p {
+    font-size: 12px;
+}
+
+.membership-level h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.active-level #benefits_bronze{
+    background-image: url(../img/coupon_1.png);
+}
+
+.active-level #benefits_silver{
+    background-image: url(../img/coupon_2.png);
+}
+
+.active-level #benefits_gold{
+    background-image: url(../img/coupon_3.png);
+}
+
+.active-level #benefits_platinum{
+    background-image: url(../img/coupon_4.png);
+}
+
+.active-level #benefits_diamond{
+    background-image: url(../img/coupon_5.png);
+}
+
+
+.membership-container{
+    background-color: #F7F7F7;
+    padding: 20px 30px;
+    margin-top: 20px;
+}
+
+.member_level h1{
+    font-size: 22px;
+    color: #4B4237;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.member_level p{
+    font-size: 14px;
+    color: #4B4237;
+    margin-bottom: 10px;
+}
+
+.newjoin_event{
+    padding: 60px 150px;
+    text-align: center;
+}
+
+.newjoin h1{
+    font-size: 22px;
+    color: #4B4237;
+    font-weight: bold;
+    margin-bottom: 10px;    
+}
+
+.newjoin p{
+    font-size: 14px;
+    color: #4B4237;
+    margin-bottom: 10px;
+}
+
+
+.newjoin_event ul{
+    display: flex;
+    margin-top: 40px;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.newjoin_event li{
+    width: 25%;
+    border: 2px solid #4B4237;
+    border-radius: 8px;
+    padding:40px 0;
+    color: #4B4237;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.newjoin_event h6{
+    font-size: 14px;
+
+}
+.newjoin_event li h1{
+    font-size: 40px;
+    font-weight: bold;
+}
+.newjoin_event h2{
+    font-size: 14px;
+}
