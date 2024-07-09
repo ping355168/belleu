@@ -1,0 +1,90 @@
+@import url(reset.css);
+@import url(style.css);
+
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    }
+
+.active, .accordion:hover {
+    background-color: #ccc;
+}
+
+.panel {
+padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+}   
+
+main{
+    padding: 80px 150px;
+}
+
+.the_accordion{
+    margin-top: 50px;
+}
+
+.title{
+    font-size: 28px;
+    color: #4B4237;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+header{
+    background: none;
+    background-color: #F6F4EE;
+    color: #4B4237;
+    border-bottom: 1px solid #999; 
+}
+
+.button a,.header_right li a{
+    text-decoration: none;
+    color: #4B4237;
+}
+.LOGO a{
+    color: #4B4237;
+}
+
+.title_p{
+    text-align: center;
+    font-size: 16px;
+    color: #4B4237;
+    margin-bottom: 10px;
+}
+.accordion{
+    font-size: 16px;
+    color: #4B4237;
+    font-weight: bold;
+}
+
+.panel{
+    padding: 20px 10px;
+    font-size: 14px;
+}
+
+span{
+    font-weight: bold;
+
+}
+
+.panel h2{
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.panel p{
+    margin-bottom: 10px;
+}
+
+.header_right input{
+    border-bottom: 1px solid #4B4237; 
+}

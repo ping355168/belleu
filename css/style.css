@@ -1,0 +1,381 @@
+.noto-sans-tc-regular{
+    font-family: "Noto Sans TC", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+
+.gaegu-regular {
+    font-family: "Gaegu", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body{
+    font-family: Noto Sans TC;
+    overflow-x: hidden;
+}
+
+/*----------------------頁首----------------------*/
+header{
+    width: 100%;
+    height: 45px;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.30) 0%, rgba(56, 56, 56, 0.23) 49%, rgba(230, 230, 230, 0.00) 100%);
+    
+    padding: 0 60px;
+    box-sizing: border-box;
+
+    font-size: 12px;
+    color: white;
+
+    z-index: 5;
+}
+
+.header_left {
+    display: flex;
+}
+
+.LOGO a{
+    color: white;
+    font-family: gaegu;
+    font-size: 32px;
+    margin-right: 20px;
+    text-decoration: none;
+}
+.header_buttons{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.button{
+    display: flex;
+    justify-content: center;
+}
+
+.button,.header_right li{
+    margin:0 10px 0 10px ;
+}
+
+.button a,.header_right li a{
+    text-decoration: none;
+    color: white;
+}
+
+.header_right ul{
+    display: flex;
+    align-items: center;
+}
+
+.header_right input{
+    width: 60px;
+    display: block;
+    border: none;
+    border-bottom: 1px solid white; 
+    background:none ;
+}
+
+.header_right input:focus {
+    outline: none;
+}
+
+header.scrolled {
+    position: fixed;
+    top: 0;
+    background: none;
+    background-color: #F6F4EE;
+    color: #4B4237;
+    border-bottom: 1px solid #999; 
+}
+
+header.scrolled a {
+    color: #4B4237;
+}
+
+header.scrolled input{
+    color: #4B4237;
+    border-bottom: 1px solid #4b4237; 
+}
+
+.button_list{
+    width: 80px;
+    display: none;
+    margin-top: 15px;
+    background-color: #F6F4EE;
+    position: absolute;
+    color: #4B4237;
+    padding: 10px;
+}
+.button_list a{
+    padding: 5px 10px;
+    display: block;
+    color: #4B4237;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+.button a:hover + .button_list,.button_list:hover,.button_list a:hover{
+    display: block;
+}
+.button_list a:hover{
+    background: #EDE7D9;
+}
+
+
+.marquee{
+    color: white;
+    background-color:  #E5AAA3 ;
+    font-size: 12px;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/*------------------- 頁尾----------------------*/
+footer{
+    background-color: #A49694;
+    padding: 40px 100px 20px;
+    color: white;
+
+}
+
+footer img{
+    height: 40px;
+}
+.footer_left_top{
+    display: flex;
+    align-items: center;
+}
+.footer_left_top a{
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    margin-right: 40px;
+}
+
+.company_name{
+    display: flex;
+    align-items: end;
+}
+
+.company_name p{
+    display: block;
+    font-family: gaegu;
+    font-size: 30px;
+}
+.company_name h1{
+    font-size: 14px;
+    display: block;
+    margin-left: 20px;
+}
+
+.right_top h1{
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+.right_bottom h2{
+    font-size: 10px;
+    margin-bottom: 5px;
+}
+
+.right_bottom {
+    margin-bottom: 10px;
+}
+
+.top{
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer_right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.footer_left{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.company_information{
+    display: flex;
+}
+.company_information p{
+    margin-top: 5px;
+    font-size: 12px;
+    margin-right: 20px;
+}
+
+/*------------------- 頁尾----------------------*/
+.product{
+    position: relative;
+}
+
+.product > p{
+    position: absolute;
+    top: 0;
+    display: block;
+    background-color: #E5AAA3;
+    color: white;
+    padding: 10px 10px;
+    box-sizing: border-box;
+    font-size: 18px;
+}
+
+.products_area{
+    width: 100vw;
+    box-sizing: border-box;
+    padding: 60px 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.product_text_area{
+    text-align: center;
+    color: #736B60;
+}
+
+.product_text_area h1{
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 20px;
+}
+
+.product_text_area p{
+    font-size: 16px;
+    margin-bottom: 5px;
+    line-height: 23px;
+}
+.product_wall a img{
+    width: 180px;
+}
+
+
+.product_introduction > a{
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.product_price h3{
+    font-size: 10px;
+    color: #FF8675;
+}
+
+.product_price h4{
+    color: #4B4237;
+    font-size: 12px;
+}
+
+.function_buttons{
+    font-size: 14px;
+    color:#A49694;
+}
+.function_buttons i:hover{
+    color: #FF8675;
+}
+.product_amount{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.product_price{
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+}
+
+.product_introduction{
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.product_wall{
+    width: 100%;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:40px 20px;
+}
+
+.product a,.product_introduction a{
+    text-decoration: none;
+    color: #4B4237;
+}
+
+.see_more{
+    display: flex;
+    justify-content: center;
+}
+.see_more a{
+    display: block;
+    padding: 5px 40px;
+    background-color: #F5F5F5;
+    color: #4B4237;
+    text-decoration: none;
+    border: 1px solid #4B4237;
+    font-size: 12px;
+    margin: 30px 0 30px 0;
+    box-sizing: border-box;
+}
+.see_more a:hover {
+    background-color: #A49694;
+    border: 1px solid #4B4237;
+    color: white;
+  }
+
+  .prev, .next {
+    cursor: pointer;
+    margin: auto;
+    padding: 16px;
+    color: #4B4237;
+    font-weight: bold;
+    font-size: 18px;
+    top: 50%;
+    margin-top: -22px;
+    user-select: none;
+    position: absolute;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+    color: white;
+}
+
+.next {
+    right: 5%;
+}
+.prev {
+    left: 5%;
+}
+
+.pagination{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.pagination a {
+    display: block;
+    text-align: center;
+    width: 20px;
+    color: black;
+    font-size: 14px;
+    height: auto;
+    padding: 8px 10px;
+    text-decoration: none;
+    transition: background-color .3s;
+  }
+  
+  .pagination a.active {
+    background-color: #A49694;
+    color: white;
+  }
+  
+  .pagination a:hover:not(.active) {background-color: #ddd;}

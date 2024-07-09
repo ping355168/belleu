@@ -1,0 +1,298 @@
+@import url(reset.css);
+@import url(style.css);
+
+* {
+  box-sizing: border-box;
+}
+
+
+main{
+    padding: 60px 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 415px;
+    gap: 5px;
+}
+
+.mySlides {
+  display: none;
+}
+
+.prev,.next {
+    position: absolute;
+    top: 50%;
+    margin-top: -60px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.next {
+    right: 10px;
+    border-radius: 3px 0 0 3px;
+}
+.prev {
+    left: 10px;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,.next:hover {
+    background-color:#4B4237;
+}
+
+.container > .row {
+    display: flex;
+    flex-direction:row;
+    gap: 5px;
+    margin-bottom: 0;
+}
+.column img{
+  width: 100px;
+  height:100px;
+  cursor:pointer
+}
+.mySlides img{
+    width:415px;
+    height:415px;
+    cursor:pointer
+}
+
+.demo {
+    opacity: 0.6;
+}
+
+.active,.demo:hover {
+    opacity: 1;
+}
+
+
+.the_production{
+    width: 500px;
+}
+
+.pro_top > h6{
+    font-size: 10px;
+    color: #4B4237;   
+    margin-bottom: 5px;;
+}
+
+.today_arrive{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 5px;;
+    gap: 5px;
+    align-items: center;
+}
+.today_arrive p{
+    font-size: 14px;
+    font-weight: bold;
+    color: #FF8675;
+}
+
+.today_arrive i{
+    font-size: 14px;
+    color: #FF8675;
+}
+
+
+.today_arrive h6{
+    margin-left: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #4B4237;
+}
+
+.tage {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.tage h1{
+    font-size: 10px;
+    padding: 5px;
+    background-color: #A49694;
+    color: white;
+}
+
+.price{
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    gap: 10px;
+    margin-bottom: 5px;
+}
+.price h1{
+    font-size: 12px;
+    color: #4B4237;
+    text-decoration-line: line-through;
+}
+
+.price h2{
+    font-size: 12px;
+    color: #4B4237;
+}
+
+.price h3{
+    font-size: 14px;
+    color: #4B4237;
+}
+
+.price h4{
+    font-size: 12px;
+    color: #FF8675;
+}
+
+.discount{
+    display: flex;
+    flex-direction: row;
+    font-size: 10px;
+    color: #4B4237;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+.checked {
+    color: orange;
+}
+.tage span{
+    font-size: 12px;
+}
+.tage p{
+    color: orange;
+    font-size: 12px;
+}
+
+.star_rating{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.check_rate{
+    display: flex;
+    flex-direction: row;
+    font-size: 12px;
+    background-color: #F6F4EE;
+    padding: 20px;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.col-25 {
+    float: left;
+    width: 60px;
+    font-size: 12px;
+  }
+  
+  .col-75 {
+    float: left;
+    height: 30px;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  .dropdown{
+    height: 30px;
+    font-size: 12px;
+
+  }
+
+.row input{
+    height: 30px;
+}
+
+.find_my_size h1{
+    font-size: 12px;
+    padding: 20px;
+    background-color: #E5AAA3;
+    color: white;
+    text-align: center;
+}
+
+.find_my_size{
+    margin-bottom: 10px;
+}
+
+.a_lot_of_buttons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    height: 60px;
+}
+
+.like{
+    background-color: #F6F4EE;
+    text-align: center;
+    color: #4B4237;
+    text-align: center;
+    width: 75px;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.gift{
+    background-color: #F6F4EE;
+    text-align: center;
+    color: #4B4237;
+    text-align: center;
+    width: 100px;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.add_to_cart{
+    background-color: #F6F4EE;
+    text-align: center;
+    color: #4B4237;
+    text-align: center;
+    width: 150px;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.buy_now{
+    background-color: #E5AAA3;
+    color: white;
+    text-align: center;
+    width: 150px;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.the_production{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.the_production a{
+    text-decoration: none;
+}
+
+.the_production i{
+    margin-bottom: 5px;
+}

@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="css/style_1+1event.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Gaegu&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/457198d549.js" crossorigin="anonymous"></script>
+
+    </head>
+    <body>
+        <div class="marquee">
+            <p>下載app隨時領取最新優惠資訊！</p>
+        </div>
+<!---------------------- 頁首 ---------------------->
+        <header id="header">
+            <!---- 頁首左側 ---->
+            <div class="header_left">
+                <div class="LOGO">
+                    <a href="/index.html">BELLEU</a>
+                </div>
+                <div class="header_buttons">
+                    <div class="button">                
+                        <a href="#">熱門商品</a>
+                    </div>
+                    <div class="button">   
+                        <a href="/new.html">最新商品</a>
+                    </div>
+                    <div class="button">   
+                        <a href="/1+1event.html">買一送一</a>
+                    </div>
+                    <div class="button">   
+                        <a href="#">今天出發</a>
+                    </div>
+                    <div class="button">   
+                        <a href="#">上身區</a>
+                        <div class="button_list">
+                            <a href="">無袖上衣</a>
+                            <a href="">短袖上衣</a>
+                            <a href="">長袖上衣</a>
+                        </div>
+                    </div>
+                    <div class="button">   
+                        <a href="#">下身區</a>
+                        <div class="button_list">
+                            <a href="">短褲</a>
+                            <a href="">短裙</a>
+                            <a href="">長褲</a>
+                            <a href="">長裙</a>
+                        </div>
+                    </div>
+                    <div class="button">   
+                        <a href="#">全身區</a>
+                        <div class="button_list">
+                            <a href="">連身裙</a>
+                            <a href="">連身褲</a>
+                        </div>
+                    </div>
+                    <div class="button">   
+                        <a href="#">配件</a>
+                        <div class="button_list">
+                            <a href="">珠寶</a>
+                            <a href="">裝飾品</a>
+                        </div>
+                    </div>
+                    <div class="button">   
+                        <a href="#">鞋子</a>
+                        <div class="button_list">
+                            <a href="">運動鞋</a>
+                            <a href="">高跟鞋</a>
+                            <a href="">平底鞋</a>
+                            <a href="">拖鞋</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!---- 頁首右側 ---->
+            <div class="header_right">
+                <ul>
+                    <li><input type="text"></li>
+                    <li><i class="fa fa-search"></i></li>
+                    <li><a href="">登入</a></li>
+                    <li><a href="">註冊</a></li>
+                </ul>
+            </div>
+        </header>
+        <script>
+            window.addEventListener('scroll', function() {
+            let header = document.getElementById('header');
+            if (window.scrollY > 0) {
+            header.classList.add('scrolled');
+            } else {
+            header.classList.remove('scrolled');
+            }
+            });
+        </script>
+
+        <div class="mySlides">
+            <img src="/img/event_1+1.png">
+        </div>
+
+
+        <div class="popular_items_area">
+            <div class="popular_items_text_area">
+                <h1>熱門品項</h1>
+                <p>因為1+1 快要被搶光啦🔥</p>
+            </div>
+            <div class="popular_items">
+                <div class="product">
+                    <a href="#">
+                        <img src="/img/item/商品圖 (1).png" alt="">
+                    </a>
+                    <div class="product_introduction">
+                        <a href="#">復古水洗牛仔裙</a>
+                        <div class="product_price">
+                            <div class="product_amount">
+                                <h3>65%</h3>
+                                <h4>599元</h4>
+                            </div>
+                            <div class="function_buttons">
+                                <i class="fa fa-heart"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>1</p>
+                </div> 
+                <div class="product">
+                    <a href="#">
+                        <img src="/img/item/商品圖 (2).png" alt="">
+                    </a>
+                    <div class="product_introduction">
+                        <a href="#">復古水洗牛仔裙</a>
+                        <div class="product_price">
+                            <div class="product_amount">
+                                <h3>65%</h3>
+                                <h4>599元</h4>
+                            </div>
+                            <div class="function_buttons">
+                                <i class="fa fa-heart"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>2</p>
+                </div> 
+                <div class="product">
+                    <a href="#">
+                        <img src="/img/item/商品圖 (3).png" alt="">
+                    </a>
+                    <div class="product_introduction">
+                        <a href="#">復古水洗牛仔裙</a>
+                        <div class="product_price">
+                            <div class="product_amount">
+                                <h3>65%</h3>
+                                <h4>599元</h4>
+                            </div>
+                            <div class="function_buttons">
+                                <i class="fa fa-heart"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>3</p>
+                </div> 
+                <div class="product">
+                    <a href="#">
+                        <img src="/img/item/商品圖 (4).png" alt="">
+                    </a>
+                    <div class="product_introduction">
+                        <a href="#">復古水洗牛仔裙</a>
+                        <div class="product_price">
+                            <div class="product_amount">
+                                <h3>65%</h3>
+                                <h4>599元</h4>
+                            </div>
+                            <div class="function_buttons">
+                                <i class="fa fa-heart"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>4</p>
+                </div> 
+                <div class="product">
+                    <a href="#">
+                        <img src="/img/item/商品圖 (5).png" alt="">
+                    </a>
+                    <div class="product_introduction">
+                        <a href="#">復古水洗牛仔裙</a>
+                        <div class="product_price">
+                            <div class="product_amount">
+                                <h3>65%</h3>
+                                <h4>599元</h4>
+                            </div>
+                            <div class="function_buttons">
+                                <i class="fa fa-heart"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>5</p>
+                </div> 
+                <div class="product">
+                    <a href="#">
+                        <img src="/img/item/商品圖 (6).png" alt="">
+                    </a>
+                    <div class="product_introduction">
+                        <a href="#">復古水洗牛仔裙</a>
+                        <div class="product_price">
+                            <div class="product_amount">
+                                <h3>65%</h3>
+                                <h4>599元</h4>
+                            </div>
+                            <div class="function_buttons">
+                                <i class="fa fa-heart"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>6</p>
+                </div> 
+                <div class="product">
+                    <a href="#">
+                        <img src="/img/item/商品圖 (7).png" alt="">
+                    </a>
+                    <div class="product_introduction">
+                        <a href="#">復古水洗牛仔裙</a>
+                        <div class="product_price">
+                            <div class="product_amount">
+                                <h3>65%</h3>
+                                <h4>599元</h4>
+                            </div>
+                            <div class="function_buttons">
+                                <i class="fa fa-heart"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>7</p>
+                </div> 
+                <div class="product">
+                    <a href="#">
+                        <img src="/img/item/商品圖 (8).png" alt="">
+                    </a>
+                    <div class="product_introduction">
+                        <a href="#">復古水洗牛仔裙</a>
+                        <div class="product_price">
+                            <div class="product_amount">
+                                <h3>65%</h3>
+                                <h4>599元</h4>
+                            </div>
+                            <div class="function_buttons">
+                                <i class="fa fa-heart"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>8</p>
+                </div> 
+                <div class="product">
+                    <a href="#">
+                        <img src="/img/item/商品圖 (9).png" alt="">
+                    </a>
+                    <div class="product_introduction">
+                        <a href="#">復古水洗牛仔裙</a>
+                        <div class="product_price">
+                            <div class="product_amount">
+                                <h3>65%</h3>
+                                <h4>599元</h4>
+                            </div>
+                            <div class="function_buttons">
+                                <i class="fa fa-heart"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>9</p>
+                </div> 
+                <div class="product">
+                    <a href="#">
+                        <img src="/img/item/商品圖 (10).png" alt="">
+                    </a>
+                    <div class="product_introduction">
+                        <a href="#">復古水洗牛仔裙</a>
+                        <div class="product_price">
+                            <div class="product_amount">
+                                <h3>65%</h3>
+                                <h4>599元</h4>
+                            </div>
+                            <div class="function_buttons">
+                                <i class="fa fa-heart"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>10</p>
+                </div>   
+            </div>
+            <a class="prev" onclick="plusEventSlides(-1)"><i class="fa-solid fa-chevron-left"></i></a>
+            <a class="next" onclick="plusEventSlides(1)"><i class="fa-solid fa-chevron-right"></i></a>
+        </div>
+
+        <script>
+            function plusEventSlides(n) {
+            if (n > 0) {
+                rotateSlidesForward();
+            } else {
+                rotateSlidesBackward();
+            }
+            }
+
+            function rotateSlidesForward() {
+            let container = document.querySelector('.popular_items');
+            let firstItem = container.querySelector('.product');
+            container.appendChild(firstItem);
+            }
+
+            function rotateSlidesBackward() {
+            let container = document.querySelector('.popular_items');
+            let items = container.querySelectorAll('.product');
+            let lastItem = items[items.length - 1];
+            container.insertBefore(lastItem, items[0]);
+            }
+        </script>
+<!---------------------- 推薦商品 ---------------------->
+        <div class="products_area">
+            <div class="product_text_area">
+                <h1>快樂雙倍！</h1>
+                <p>與您分享的快樂勝過獨自擁有⛱️</p>
+            </div>
+            <div class="product_wall">
+                <div class="product">
+                    <a href="#">
+                        <img src="/img/item/商品圖 (6).png" alt="">
+                    </a>
+                    <div class="product_introduction">
+                        <a href="#">復古水洗牛仔裙</a>
+                        <div class="product_price">
+                            <div class="product_amount">
+                                <h3>65%</h3>
+                                <h4>599元</h4>
+                            </div>
+                            <div class="function_buttons">
+                                <i class="fa fa-heart"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>                
+                <div class="product">
+                    <a href="#">
+                        <img src="/img/item/商品圖 (7).png" alt="">
+                    </a>
+                    <div class="product_introduction">
+                        <a href="#">復古水洗牛仔裙</a>
+                        <div class="product_price">
+                            <div class="product_amount">
+                                <h3>65%</h3>
+                                <h4>599元</h4>
+                            </div>
+                            <div class="function_buttons">
+                                <i class="fa fa-heart"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product">
+                    <a href="#">
+                        <img src="/img/item/商品圖 (8).png" alt="">
+                    </a>
+                    <div class="product_introduction">
+                        <a href="#">復古水洗牛仔裙</a>
+                        <div class="product_price">
+                            <div class="product_amount">
+                                <h3>65%</h3>
+                                <h4>599元</h4>
+                            </div>
+                            <div class="function_buttons">
+                                <i class="fa fa-heart"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product">
+                    <a href="#">
+                        <img src="/img/item/商品圖 (9).png" alt="">
+                    </a>
+                    <div class="product_introduction">
+                        <a href="#">復古水洗牛仔裙</a>
+                        <div class="product_price">
+                            <div class="product_amount">
+                                <h3>65%</h3>
+                                <h4>599元</h4>
+                            </div>
+                            <div class="function_buttons">
+                                <i class="fa fa-heart"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product">
+                    <a href="#">
+                        <img src="/img/item/商品圖 (10).png" alt="">
+                    </a>
+                    <div class="product_introduction">
+                        <a href="#">復古水洗牛仔裙</a>
+                        <div class="product_price">
+                            <div class="product_amount">
+                                <h3>65%</h3>
+                                <h4>599元</h4>
+                            </div>
+                            <div class="function_buttons">
+                                <i class="fa fa-heart"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product">
+                    <a href="#">
+                        <img src="/img/item/商品圖 (11).png" alt="">
+                    </a>
+                    <div class="product_introduction">
+                        <a href="#">復古水洗牛仔裙</a>
+                        <div class="product_price">
+                            <div class="product_amount">
+                                <h3>65%</h3>
+                                <h4>599元</h4>
+                            </div>
+                            <div class="function_buttons">
+                                <i class="fa fa-heart"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product">
+                    <a href="#">
+                        <img src="/img/item/商品圖 (12).png" alt="">
+                    </a>
+                    <div class="product_introduction">
+                        <a href="#">復古水洗牛仔裙</a>
+                        <div class="product_price">
+                            <div class="product_amount">
+                                <h3>65%</h3>
+                                <h4>599元</h4>
+                            </div>
+                            <div class="function_buttons">
+                                <i class="fa fa-heart"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product">
+                    <a href="#">
+                        <img src="/img/item/商品圖 (13).png" alt="">
+                    </a>
+                    <div class="product_introduction">
+                        <a href="#">復古水洗牛仔裙</a>
+                        <div class="product_price">
+                            <div class="product_amount">
+                                <h3>65%</h3>
+                                <h4>599元</h4>
+                            </div>
+                            <div class="function_buttons">
+                                <i class="fa fa-heart"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product">
+                    <a href="#">
+                        <img src="/img/item/商品圖 (14).png" alt="">
+                    </a>
+                    <div class="product_introduction">
+                        <a href="#">復古水洗牛仔裙</a>
+                        <div class="product_price">
+                            <div class="product_amount">
+                                <h3>65%</h3>
+                                <h4>599元</h4>
+                            </div>
+                            <div class="function_buttons">
+                                <i class="fa fa-heart"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product">
+                    <a href="#">
+                        <img src="/img/item/商品圖 (15).png" alt="">
+                    </a>
+                    <div class="product_introduction">
+                        <a href="#">復古水洗牛仔裙</a>
+                        <div class="product_price">
+                            <div class="product_amount">
+                                <h3>65%</h3>
+                                <h4>599元</h4>
+                            </div>
+                            <div class="function_buttons">
+                                <i class="fa fa-heart"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pagination">
+                <a href="#">&laquo;</a>
+                <a class="active" href="#">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#">6</a>
+                <a href="#">&raquo;</a>
+            </div>
+        </div>
+
+        <footer>
+            <div class="top">
+                <div class="footer_left">
+                    <div class="footer_left_top">
+                        <a href="brand_introduce.html">關於比露</a>
+                        <a href="membership.html">會員福利</a>
+                        <a href="terms_of_use.html">使用條款</a>
+                        <a href="privacy_policy.html">隱私權政策</a>
+                        <a href="#">實體店面</a>
+                        <a href="store_information.html">加入我們</a>
+                    </div>
+                    <div class="company_name">
+                        <p>BELLEU</p>
+                        <h1>比露服飾無限公司</h1>
+                    </div>
+                </div>
+                <div class="footer_right">
+                    <div class="right_top">
+                        <h1>客服中心：(TID)102-11-8939</h1>
+                        <h1>電子郵件：service@belleu.com.tw </h1>
+                    </div>
+                    <div class="right_bottom"> 
+                        <h2>平日（週一至週五）13:00-22:00</h2>
+                        <h2>例假日（週六、週日及國定假日）10:00-24:00</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="company_information">
+                <p>負責人鄭丞恩</p>
+                <p>新北市啵啵區嘻嘻路102街11號</p>
+                <p>統編 102118939 </p>
+                <p>本網站僅供網站設計學習用途 如有侵權請聯絡 ping355168@gmail.com</p>
+            </div>
+        </footer>
+    </body>
+</html>
