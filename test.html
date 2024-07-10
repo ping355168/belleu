@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link rel="stylesheet" href="./css/test.css">
+    <style>
+        body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden; /* Prevent body scrolling */
+}
+
+.product-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.product-image {
+    flex-shrink: 0;
+}
+
+.product-description {
+    overflow-y: scroll;
+    flex-grow: 1;
+    scrollbar-width: none; /* Firefox */
+}
+
+.product-description::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+}
+
+    </style>
+</head>
+<body>
+    <div class="product-container">
+        <div class="product-image">
+            <img src="./img/app_logo.png" alt="Product Image">
+        </div>
+        <div class="product-description">
+            <h1>Product Title</h1>
+            <p>Your product description here...</p>
+            <p>Your product description here...</p>
+            <p>Your product description here...</p>
+            <p>Your product description here...</p>
+            <p>Your product description here...</p>
+            <p>Your product description here...</p>
+            <p>Your product description here...</p>
+            <p>Your product description here...</p>
+            <p>Your product description here...</p>
+            <p>Your product description here...</p>
+            <p>Your product description here...</p>
+            <p>Your product description here...</p>
+            <p>Your product description here...</p>
+            <p>Your product description here...</p>
+            <p>Your product description here...</p>
+            <p>Your product description here...</p>
+            <p>Your product description here...</p>
+            <p>Your product description here...</p>
+            <p>Your product description here...</p>
+            <p>Your product description here...</p>
+            <p>Your product description here...</p>
+            <p>Your product description here...</p>
+            <!-- More content to enable scrolling -->
+        </div>
+    </div>
+    <script src="./js/test.js"></script>
+
+    
+</body>
+</html>

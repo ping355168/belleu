@@ -5,43 +5,26 @@
 body, html {
     margin: 0;
     padding: 0;
-    height: 100%;
-    overflow-x: hidden;
 }
-.right::-webkit-scrollbar {
-    display: none;  
-}
+
 .container {
     padding-top: 45px;
     display: flex;
-    height: 100vh;
+    position: relative;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
 }
+
 .left {
-    position: sticky;
-    top: 0;
-    height: 100vh;
+    position: fixed;
     width: 50vw;
 }
+
 .right {
-    padding: 30px;
-    width: 50vw;
-    overflow-y: auto;
-    max-height: 100vh;
+    margin-left: calc(50vw + 80px);
+    padding: 20px 80px  0 0;
 }
-.product_intro {
-    height: 150vh;
-}
-.other-products {
-    height: 100vh;
-    background-color: lightblue;
-}
-
-.left img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
 
 .Slide{
     display: flex;
@@ -50,18 +33,15 @@ body, html {
 
 .Slide_Area {
     position: relative;
-    overflow: hidden;
 }
 
 .mySlides {
-    position: sticky;
-  display: none;
+    display: none;
 }
 
 .prev,.next {
     position: absolute;
     top: 50%;
-    margin-top: -60px;
     color: white;
     font-weight: bold;
     font-size: 20px;
@@ -71,6 +51,7 @@ body, html {
     right: 10px;
     border-radius: 3px 0 0 3px;
 }
+
 .prev {
     left: 10px;
     border-radius: 3px 0 0 3px;
@@ -85,9 +66,8 @@ body, html {
     -o-user-drag: none;
     cursor:pointer;
     display: flex;
-    width: auto;
     height: 100vh;
-    position: sticky;
+    width: 50vw;
 }
 
 header{
@@ -98,10 +78,11 @@ header{
 }
 
 
-header input{
+.header_right input{
     color: #4B4237;
     border-bottom: 1px solid #4b4237; 
 }
+
 
 .button a,.header_right li a{
     text-decoration: none;
@@ -109,4 +90,283 @@ header input{
 }
 .LOGO a{
     color: #4B4237;
+}
+
+
+.hearts i{
+    width: 100%;
+    text-align: right;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.product_intro h1{
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: #4B4237;
+}
+
+.black_button{
+    padding: 7px;
+    background-color: black;
+}
+
+.colors{
+    border: 1px solid #4B4237;
+    padding: 3px;
+}
+
+.Select{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.brown_button{
+    padding: 7px;
+    background-color: rgb(91, 66, 48);
+}
+
+.white_button{
+    padding:7px;
+    background-color: #dddddd;
+}
+
+.TEXT{
+    text-align: right;
+    font-size: 16px;
+    color: #4B4237;
+}
+
+.TEXT span{
+    font-size: 14px;
+    margin-right: 5px;
+    color: #A49694;
+    text-decoration-line: line-through;
+}
+
+.pro_tit {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.SIZE{
+    font-size: 12px;
+    padding: 0 7px;
+}
+
+.product_intro input{
+    width: 100%;
+    height: 35px;
+    text-align: center;
+    font-size: 12px;
+    color: #4B4237;
+    border: 1 solid #4B4237;
+    margin-bottom: 10px;
+}
+
+.two_buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap:2%
+}
+
+.but{
+    font-size: 12px;
+    width: 49%;
+    text-align: center;
+    padding: 10px 20px;
+    background-color: #4B4237;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.but:first-child{
+    background-color: white;
+    color: #4B4237;
+    border:1px solid #4B4237;
+}
+
+.but:first-child:hover{
+    background-color: #F6F4EE;
+    border:1px solid white;
+}
+
+.pro_info_area p{
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.pro_info_area{
+    padding: 20px 0;
+}
+
+.pro_info_area p:first-child{
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+.pro_info_area p:last-child{
+    margin-top: 20px;
+}
+
+.material_information img{
+    display: flex;
+    width: 50%;
+}
+
+.material_information{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.horizontal-table {
+    border-top: 1px solid #000;
+    display: flex;
+    
+}
+.horizontal-table .header, .horizontal-table .row {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
+.cell {
+    text-align: center;
+    padding: 10px 20px;
+    font-size:12px;
+    border-bottom: 1px solid #000;
+}
+.horizontal-table .header{
+    background-color: #E5AAA3;
+}
+
+.size_info{
+    display: flex;
+    flex-direction: column;
+}
+.size_info h1{
+    font-size: 14px;
+    text-align: left;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.size_info p{
+    margin-top: 10px;
+    font-size: 10px;
+}
+.row .cell{
+    color: #4B4237;
+}
+.header .cell{
+    color: white;
+}
+
+.row2 .cell2{
+    color: #4B4237;
+}
+.header2 .cell2{
+    background-color:#F6F4EE;
+    color: #4B4237;
+}
+.horizontal-table2 {
+    display: flex;
+    
+}
+.header2 .cell2:first-child,.row2 .cell2:first-child{
+    border-top: 1px solid #4B4237;
+}
+.horizontal-table2 .header2, .horizontal-table2 .row2 {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
+.material_info h1{
+    width: 50%;
+}
+.cell2 {
+    text-align: center;
+    padding: 10px 20px;
+    font-size:12px;
+    border-bottom: 1px solid #000;
+}
+
+table{
+    margin-top: 20px;
+    font-size: 14px;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    color: #4B4237;
+    margin-bottom: 40px;
+}
+th,td{
+    border: 0.3px solid #4B4237;
+    padding: 10px 0;
+}
+
+th{
+    background-color: #E5AAA3;
+    color: white;
+}
+
+.th{
+    background-color: #F6F4EE;
+    color: #4B4237;
+}
+.real_material_information img{
+    border-radius: 200px;
+    width: 100%;
+
+    border: 3px solid #4B4237;
+box-sizing:border-box ;
+}
+
+.real_material_information{
+    display: flex;
+}
+
+.material_pic{
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.popular_items_area{
+    width: 100vw;
+    box-sizing: border-box;
+    padding: 60px 150px;
+    position: relative;
+    background-color:white ;
+}
+
+.popular_items_text_area{
+    text-align: center;
+    color: #736B60;
+}
+
+.popular_items_text_area h1{
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.popular_items_text_area p{
+    font-size: 16px;
+}
+
+.popular_items{
+    display:flex;
+    overflow: hidden;
+    gap:20px;
+    padding:40px 0;
+    box-sizing: border-box;
+}
+.popular_items img {-o-user-drag: none;
+    width: calc((100vw - 300px - 80px) * 0.20);
 }
