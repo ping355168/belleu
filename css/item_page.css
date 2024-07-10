@@ -5,23 +5,21 @@
   box-sizing: border-box;
 }
 
-
-main{
-    padding: 60px 150px;
+body { 
+}
+.Slide{
+    padding-top: 45px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    gap: 50px;
 }
-.container {
-    display: flex;
-    flex-direction: column;
+
+.Slide_Area {
     position: relative;
-    width: calc(50vw - 150px - 50px);
-    gap: 5px;
+    overflow: hidden;
 }
 
 .mySlides {
+    position: sticky;
   display: none;
 }
 
@@ -47,22 +45,14 @@ main{
     background-color:#4B4237;
 }
 
-.container > .row {
-    display: flex;
-    flex-direction:row;
-    margin-bottom: 0;
-    position: relative;
-}
-.column img{
-  width: 100%;
-  cursor:pointer
-}
-.column:not(:first-child){
-    margin-left: 5px;
-}
-.mySlides img{
-    cursor:pointer;
 
+.mySlides img {
+    -o-user-drag: none;
+    cursor:pointer;
+    display: flex;
+    width: auto;
+    height: 100vh;
+    position: sticky;
 }
 
 .demo {
@@ -75,7 +65,8 @@ main{
 
 
 .the_production{
-    width: calc(50vw - 150px - 50px);
+    padding: 40px 40px;
+    overflow-y: auto;
 }
 
 .pro_top > h6{
@@ -192,12 +183,12 @@ main{
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-bottom: 20px;
 }
 .col-25 {
     float: left;
     width: 60px;
     font-size: 12px;
+    margin-right: 20px;
   }
   
   .col-75 {
@@ -290,15 +281,32 @@ main{
     font-size: 18px;
 }
 
-.the_production{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
+
 .the_production a{
     text-decoration: none;
 }
 
 .the_production i{
     margin-bottom: 5px;
+}
+
+
+header{
+    background: none;
+    background-color: #F6F4EE;
+    color: #4B4237;
+    border-bottom: 1px solid #999; 
+}
+
+header .button a {
+    color: #4B4237;
+}
+
+header input{
+    color: #4B4237;
+    border-bottom: 1px solid #4b4237; 
+}
+
+.LOGO a{
+    color: #4B4237;
 }

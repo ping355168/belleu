@@ -24,8 +24,11 @@ main {
 }
 
 .membership-level img {
+    -o-user-drag: none;
     width: 50%;
     margin-bottom: 10px;
+    user-select: none;
+
 }
 
 .active-level {
@@ -121,6 +124,7 @@ main {
     margin-top: 40px;
     flex-direction: row;
     gap: 20px;
+        user-select: none;
 }
 
 .newjoin_event li{
@@ -136,12 +140,21 @@ main {
 
 .newjoin_event h6{
     font-size: 14px;
+    user-select: none;
 
 }
 .newjoin_event li h1{
     font-size: 40px;
     font-weight: bold;
+    user-select: none;
 }
 .newjoin_event h2{
     font-size: 14px;
+    user-select: none;
+}
+
+.newjoin_event li:hover{
+    background-color: #E5AAA3;
+    border: 2px solid #A49694;
+    color: white;
 }

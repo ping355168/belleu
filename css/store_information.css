@@ -67,7 +67,7 @@ main > h1{
   margin-bottom: 10px;
 }
 
-.tabcontent img{
+.tabcontent img {-o-user-drag: none;
   width: 100%;
   margin-bottom: 20px;
 }

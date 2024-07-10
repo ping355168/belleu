@@ -96,8 +96,8 @@
         </script>
 
 
-        <main>
-            <div class="container">
+        <div class="Slide">
+            <div class="Slide_Area">
                 <div class="mySlides">
                     <img src="./img/item_1.jpg">
                 </div>
@@ -112,143 +112,36 @@
                     
                 <div class="mySlides">
                     <img src="./img/item_4.jpg">
-                </div>
+            </div>
                     
-                <a class="prev" onclick="plusSlides(-1)">❮</a>
-                <a class="next" onclick="plusSlides(1)">❯</a>
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
                 
-                
-                <div class="row">
-                    <div class="column">
-                    <img class="demo cursor" src="img/item_1.jpg" onclick="currentSlide(1)">
-                    </div>
-                    <div class="column">
-                    <img class="demo cursor" src="img/item_2.jpg" onclick="currentSlide(2)">
-                    </div>
-                    <div class="column">
-                    <img class="demo cursor" src="img/item_3.jpg" onclick="currentSlide(3)">
-                    </div>
-                    <div class="column">
-                    <img class="demo cursor" src="img/item_4.jpg" onclick="currentSlide(4)">
-                    </div>
-                </div>
-            </div>
-            <div class="the_production">
-                <div class="pro_top">
-                    <h6>商品編號：ss0001</h6>
-                    <div class="today_arrive">
-                        <i class="fa fa-truck"></i>
-                        <p>今日出發</p>
-                        <h6>Cherry Viola 高腰A字百褶裙</h6>
-                    </div>
-                    <div class="tage">
-                        <h1>65%折價</h1>
-                        <h1>今日上架</h1>
-                        <div class="star_rating">
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                        </div>
-                        <p>3個評論</p>
-                        <p>100%</p>
-                    </div>
-                    <div class="price">
-                        <h1>949元</h1>
-                        <h2>/</h2>
-                        <h3>599元</h3>
-                        <h4>65%</h4>
-                    </div>
-                    <div class="discount">
-                        <h1>折價350元</h1>
-                        <h2>-</h2>
-                        <h3>特價倒數12小時</h3>
-                    </div>
-                    <div class="check_rate">
-                        <h1>可分期付款（查看利率）</h1>
-                        <i class="fa fa-chevron-down"></i>
-                    </div>
-                    <div class="product_color">
+            <script>
+                let slideIndex = 1;
+                showSlides(slideIndex);
 
-                    </div>
-                    <div class="row">
-                        <div class="col-25">
-                        <label for="Size">尺寸</label>
-                        </div>
-                        <div class="col-75">
-                        <select id="Size" name="size" class='dropdown'>
-                            <option value="onesize">Onesize（僅有此選項）</option>
-                        </select>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-25">
-                        <label for="Color">顏色</label>
-                        </div>
-                        <div class="col-75">
-                        <select id="Color" name="color" class='dropdown'>
-                            <option value="black">黑色</option>
-                            <option value="white">白色</option>
-                            <option value="brown">棕色</option>
-                        </select>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-25">
-                        <label for="Size">數量</label>
-                        </div>
-                        <input type="number" id="number" name="number" >
-                    </div>
-                </div>
-                <div class="pro_down">
-                    <div class="find_my_size">
-                        <h1>找到我的顏色/尺寸</h1>
-                    </div>
-                    <div class="a_lot_of_buttons">
-                        <a href="#" class="like">
-                            <i class="far fa-heart"></i>
-                            <h1>喜歡</h1>
-                        </a>
-                        <a href="./#" class="gift">
-                            <i class="fa fa-gift"></i>
-                            <h1>我的禮物</h1>
-                        </a>
-                        <a href="#" class="add_to_cart">加入購物車</a>
-                        <a href="#" class="buy_now">購買</a>
-                    </div>
-                </div>
+                function plusSlides(n) {
+                    showSlides(slideIndex += n);
+                }
+
+                function showSlides(n) {
+                    let i;
+                    let slides = document.getElementsByClassName("mySlides");
+                    if (n > slides.length) {slideIndex = 1}
+                    if (n < 1) {slideIndex = slides.length}
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+                    slides[slideIndex-1].style.display = "block";
+                }
+            </script>              
+
             </div>
-        </main>
+            
+        </div>
         
-        <script>
-        let slideIndex = 1;
-        showSlides(slideIndex);
-        
-        function plusSlides(n) {
-          showSlides(slideIndex += n);
-        }
-        
-        function currentSlide(n) {
-          showSlides(slideIndex = n);
-        }
-        
-        function showSlides(n) {
-          let i;
-          let slides = document.getElementsByClassName("mySlides");
-          let dots = document.getElementsByClassName("demo");
-          if (n > slides.length) {slideIndex = 1}
-          if (n < 1) {slideIndex = slides.length}
-          for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-          }
-          for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-          }
-          slides[slideIndex-1].style.display = "block";
-          dots[slideIndex-1].className += " active";
-        }
-        </script>
+
                 <footer>
                     <div class="top">
                         <div class="footer_left">

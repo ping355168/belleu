@@ -8,7 +8,7 @@
     position: relative;
 }
 
-.slideshow-container img{
+.slideshow-container img {-o-user-drag: none;
     -webkit-user-drag: none;
     width: 100%;
     display: flex;
@@ -73,7 +73,7 @@ background-color: rgba(0,0,0,0.8);
     font-size: 14px;
     line-height: 20px;
 }
-.event_show img{
+.event_show img {-o-user-drag: none;
     width: calc((100vw - 300px - 60px) * 0.25);
     margin-bottom: 5px;
     -webkit-user-drag: none;
@@ -175,7 +175,7 @@ iframe{
     color: #4B4237;
 }
 
-.information img{
+.information img {-o-user-drag: none;
     width: 100px;
 }
 

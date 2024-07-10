@@ -37,6 +37,6 @@
 }
 
 
-.popular_items img{
+.popular_items img {-o-user-drag: none;
     width: calc((100vw - 300px - 80px) * 0.20);
 }

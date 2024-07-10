@@ -2,7 +2,7 @@
 @import url(style.css);
 
 
-.mySlides img{
+.mySlides img {-o-user-drag: none;
     width: 100%;
 }
 /*----------------------推薦商品----------------------*/

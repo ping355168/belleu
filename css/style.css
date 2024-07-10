@@ -142,7 +142,7 @@ footer{
 
 }
 
-footer img{
+footer img {-o-user-drag: none;
     height: 40px;
 }
 .footer_left_top{
@@ -254,7 +254,7 @@ footer img{
     margin-bottom: 5px;
     line-height: 23px;
 }
-.product_wall a img{
+.product_wall a img {-o-user-drag: none;
     width: calc((100vw - 300px - 80px) * 0.20);
 }
 
@@ -380,7 +380,7 @@ footer img{
   .pagination a:hover:not(.active) {background-color: #ddd;}
 
 
-.mySlides img{
+.mySlides img {-o-user-drag: none;
     width: 100%;
 }
 
