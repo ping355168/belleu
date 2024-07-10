@@ -12,7 +12,8 @@ main {
 .membership-container {
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    justify-content: space-between;
+
 }
 
 .membership-level {
@@ -39,11 +40,12 @@ main {
 .benefits li {
     margin-top: 30px;
     font-size: 14px;
-    background-image: url(img/coupon/coupon_原皮.png);
+    background-image: url(../img/coupon_0.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     padding: 30px 40px;
+    box-sizing: border-box;
 }
 
 .membership-level p {
@@ -56,23 +58,23 @@ main {
 }
 
 .active-level #benefits_bronze{
-    background-image: url(img/coupon/coupon_銅皮.png);
+    background-image: url(../img/coupon_1.png);
 }
 
 .active-level #benefits_silver{
-    background-image: url(img/coupon/coupon_銀皮.png);
+    background-image: url(../img/coupon_2.png);
 }
 
 .active-level #benefits_gold{
-    background-image: url(img/coupon/coupon_金皮.png);
+    background-image: url(../img/coupon_3.png);
 }
 
 .active-level #benefits_platinum{
-    background-image: url(img/coupon/coupon_鉑皮.png);
+    background-image: url(../img/coupon_4.png);
 }
 
 .active-level #benefits_diamond{
-    background-image: url(img/coupon/coupon_鑽皮.png);
+    background-image: url(../img/coupon_5.png);
 }
 
 
