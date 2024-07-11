@@ -1,0 +1,119 @@
+@import url(reset.css);
+@import url(style.css);
+
+
+
+/*----------------------推薦商品----------------------*/
+
+.popular_items_area{
+    width: 100vw;
+    box-sizing: border-box;
+    padding: 100px 150px;
+    position: relative;
+    background-color:#F6F4EE ;
+}
+
+.popular_items_text_area{
+    text-align: center;
+    color: #736B60;
+}
+
+.popular_items_text_area h1{
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.popular_items_text_area p{
+    font-size: 16px;
+}
+
+.popular_items{
+    display:flex;
+    overflow: hidden;
+    gap:20px;
+    padding:40px 0;
+    box-sizing: border-box;
+}
+
+
+.popular_items img {-o-user-drag: none;
+    width: calc((100vw - 300px - 80px) * 0.20);
+}
+
+.fenlay{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.fenlay_active{
+    color: #FF8675;
+}
+
+.products_area{
+    padding-top: 80px;
+}
+.product_text_area h1{
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+header{
+    background: none;
+    background-color: #F6F4EE;
+    color: #4B4237;
+    border-bottom: 1px solid #999; 
+}
+
+.button a,.header_right li a{
+    text-decoration: none;
+    color: #4B4237;
+}
+.LOGO a{
+    color: #4B4237;
+}
+
+.menu a {
+    display: block;
+    margin: 5px 0;
+    cursor: pointer;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.header_right input{
+    width: 60px;
+    display: block;
+    border: none;
+    border-bottom: 1px solid #4B4237; 
+    background:none ;
+}

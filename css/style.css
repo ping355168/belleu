@@ -103,7 +103,7 @@ header.scrolled input{
 }
 
 .button_list{
-    width: 80px;
+    width: 100px;
     display: none;
     margin-top: 15px;
     background-color: #F6F4EE;

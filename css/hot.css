@@ -1,0 +1,118 @@
+@import url(reset.css);
+@import url(style.css);
+
+
+
+/*----------------------推薦商品----------------------*/
+
+.popular_items_area{
+    width: 100vw;
+    box-sizing: border-box;
+    padding: 100px 150px;
+    position: relative;
+    background-color:#F6F4EE ;
+}
+
+.popular_items_text_area{
+    text-align: center;
+    color: #736B60;
+}
+
+.popular_items_text_area h1{
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.popular_items_text_area p{
+    font-size: 16px;
+}
+
+.popular_items{
+    display:flex;
+    overflow: hidden;
+    gap:20px;
+    padding:40px 0;
+    box-sizing: border-box;
+}
+
+
+.popular_items img {-o-user-drag: none;
+    width: calc((100vw - 300px - 80px) * 0.20);
+}
+
+.slideshow-container{
+    box-sizing:border-box;
+    position: relative;
+}
+
+.slideshow-container img {-o-user-drag: none;
+    -webkit-user-drag: none;
+    width: 100%;
+    display: flex;
+}
+
+.mySlides {
+    display: none;
+}
+
+.slideshow-container>.prev, .slideshow-container>.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    user-select: none;
+}
+
+.slideshow-container>.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.slideshow-container>.prev {
+    left: 0;
+    border-radius: 0 3px 3px 0;
+}
+
+.slideshow-container>.prev:hover, .slideshow-container>.next:hover {
+background-color: rgba(0,0,0,0.8);
+}
+
+
+.product_text_area > img{
+    width: 4vw;
+    margin-bottom: 10px;
+}
+
+.product_text_area > h1{
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.today_week_month{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    font-weight: bold;
+}
+.DAY_BTN:hover{
+    padding: 10px 20px;
+    background-color: #E5AAA3;
+    border-radius: 20px;
+    font-size: 14px;
+    color: white;
+}
+
+.DAY_BTN{
+    padding: 10px 20px;
+    background-color: #F6F4EE;
+    border-radius: 20px;
+    font-size: 14px;
+}

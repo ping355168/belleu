@@ -39,20 +39,7 @@ main{
     text-align: center;
     margin-bottom: 20px;
 }
-header{
-    background: none;
-    background-color: #F6F4EE;
-    color: #4B4237;
-    border-bottom: 1px solid #999; 
-}
 
-.button a,.header_right li a{
-    text-decoration: none;
-    color: #4B4237;
-}
-.LOGO a{
-    color: #4B4237;
-}
 
 .title_p{
     text-align: center;
@@ -85,6 +72,38 @@ span{
     margin-bottom: 10px;
 }
 
+
+.button a,.header_right li a{
+    text-decoration: none;
+    color: #4B4237;
+}
+header{
+    background: none;
+    background-color: #F6F4EE;
+    color: #4B4237;
+    border-bottom: 1px solid #999; 
+}
+
+.button a,.header_right li a{
+    text-decoration: none;
+    color: #4B4237;
+}
+.LOGO a{
+    color: #4B4237;
+}
+
+.menu a {
+    display: block;
+    margin: 5px 0;
+    cursor: pointer;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
 .header_right input{
+    width: 60px;
+    display: block;
+    border: none;
     border-bottom: 1px solid #4B4237; 
+    background:none ;
 }

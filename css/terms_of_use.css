@@ -31,6 +31,14 @@ header{
     margin-bottom: 20px;
     font-weight: bold;
 }
+
+.header_right input{
+    width: 60px;
+    display: block;
+    border: none;
+    border-bottom: 1px solid #4B4237; 
+    background:none ;
+}
 .section {
     display: block;
     padding: 40px 10px 10px;
