@@ -151,6 +151,30 @@ header{
     text-align: center;
 }
 
+.product_intro input::-webkit-outer-spin-button,
+.product_intro input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.input_item_number{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    user-select: none;
+}
+
+#minus,#plus{
+    padding: 5px;
+    cursor: pointer;
+}
+#minus:hover,#plus:hover{
+    background-color: #4B4237;
+    color: white;
+}
+
+
 .two_buttons{
     display: flex;
     flex-direction: row;
@@ -221,9 +245,6 @@ header{
 .header2 h1{
     background-color:#F6F4EE;
     color: #4B4237;
-    
-}
-.horizontal-table2 {
     
 }
 
