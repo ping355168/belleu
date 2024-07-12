@@ -10,7 +10,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Gaegu&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
-
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js">
     </head>
     <body>
         <div class="marquee">
@@ -101,51 +101,31 @@
         </script>
 
 <!---------------------- 看板 ---------------------->
-        <div class="slideshow-container">
-            <div class="mySlides">
-                <img src="./img/slideshow_img_1.jpg">
+        <div class="container">
+            <div class="slides">
+                <div class="slide">
+                    <img src="./img/backgound_1.jpg" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="./img/backgound_2.jpg" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="./img/backgound_3.jpg" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="./img/backgound_4.jpg" alt="" />
+                </div>
             </div>
-            
-            <div class="mySlides">
-                <img src="./img/slideshow_img_2.jpg">
+            <div class="slide-controls">
+                <button id="prev-btn">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button id="next-btn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
             </div>
-            
-            <div class="mySlides">
-                <img src="./img/slideshow_img_3.jpg">
-            </div>
-            
-            <div class="mySlides">
-                <img src="./img/slideshow_img_4.jpg">
-            </div>
-
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
-
-        <script>
-            let slideIndex = 1;
-
-            function plusSlides(n) {
-                showSlides(slideIndex += n);
-            }
-
-            function showSlides(n) {
-                let slides = document.getElementsByClassName("mySlides");
-
-                if (n > slides.length) {slideIndex = 1}
-
-                if (n < 1) {slideIndex = slides.length}
-
-                for (let i = 0; i < slides.length; i++) {
-                    slides[i].style.display = "none";
-                }
-
-                slides[slideIndex-1].style.display = "block";;
-            }
-
-            showSlides(slideIndex);
-
-        </script>
+        <script src="./js/silde_hwa.js"></script>
 <!---------------------- 品牌介紹 ---------------------->
         
         <div class="brand_introduction">
