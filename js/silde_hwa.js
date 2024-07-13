@@ -61,12 +61,19 @@ const moveToPreviousSlide = () => {
   slide.style.transform = `translateX(${-slideWidth * index}px)`;
 };
 
-slideContainer.addEventListener('mouseenter', () => {
+const resetSlideTimer = () => {
   clearInterval(slideId);
+  startSlide();
+};
+
+nextBtn.addEventListener('click', () => {
+  moveToNextSlide();
+  resetSlideTimer();
 });
 
-slideContainer.addEventListener('mouseleave', startSlide);
-nextBtn.addEventListener('click', moveToNextSlide);
-prevBtn.addEventListener('click', moveToPreviousSlide);
+prevBtn.addEventListener('click', () => {
+  moveToPreviousSlide();
+  resetSlideTimer();
+});
 
 startSlide();

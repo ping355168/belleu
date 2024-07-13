@@ -10,7 +10,10 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Gaegu&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="./js/header.js"></script>
+
+
     </head>
     <body>
         <div class="marquee">
@@ -89,31 +92,22 @@
                 </ul>
             </div>
         </header>
-        <script>
-            window.addEventListener('scroll', function() {
-            let header = document.getElementById('header');
-            if (window.scrollY > 0) {
-            header.classList.add('scrolled');
-            } else {
-            header.classList.remove('scrolled');
-            }
-            });
-        </script>
+        <script src="./js/header.js"></script>
 
 <!---------------------- 看板 ---------------------->
         <div class="container">
             <div class="slides">
                 <div class="slide">
-                    <img src="./img/backgound_1.jpg" alt="" />
+                    <img src="./img/slideshow_img_1.jpg" alt="" />
                 </div>
                 <div class="slide">
-                    <img src="./img/backgound_2.jpg" alt="" />
+                    <img src="./img/slideshow_img_2.jpg" alt="" />
                 </div>
                 <div class="slide">
-                    <img src="./img/backgound_3.jpg" alt="" />
+                    <img src="./img/slideshow_img_3.jpg" alt="" />
                 </div>
                 <div class="slide">
-                    <img src="./img/backgound_4.jpg" alt="" />
+                    <img src="./img/slideshow_img_4.jpg" alt="" />
                 </div>
             </div>
             <div class="slide-controls">
@@ -134,45 +128,45 @@
                 <p>我們希望成為螢幕彼岸的你 最溫暖的購物夥伴</p>
                 <p>從日常需求的時尚單品，到讓您在重要時刻閃耀的精緻服裝，我們都將陪伴在你的身旁。</p>
             </div>
-            <div class="event_slideshow-container">
-                <div class="event_show_slide">
-                    <a href="./1+1event.html" class="event_show">
+            <div class="eventContainer">
+                <div class="eventSlides">
+                    <a href="./1+1event.html" class="eventSlide">
                         <img src="./img/speicial_event_1.jpg" draggable="false" alt="">
                         <p>因為好看所以1+1🖤</p>
                     </a>
-                    <a href="./" class="event_show">
+                    <a href="./" class="eventSlide">
                         <img src="./img/speicial_event_2.jpg" draggable="false" alt="">
                         <p>今天9點前下單'明天就到'💙</p>
                     </a>
-                    <a href="./" class="event_show">
+                    <a href="./" class="eventSlide">
                         <img src="./img/speicial_event_3.jpg" draggable="false" alt="">
                         <p>這次讓我們陪你過夏天💚</p>
                     </a>
-                    <a href="./" class="event_show">
+                    <a href="./" class="eventSlide">
                         <img src="./img/speicial_event_4.jpg" draggable="false" alt="">
                         <p>'自拍活動'進行中 📷</p>
                     </a>
-                    <a href="./" class="event_show">
+                    <a href="./" class="eventSlide">
                         <img src="./img/speicial_event_5.jpg" draggable="false" alt="">
                         <p>某活動</p>
                     </a>
-                    <a href="./" class="event_show">
+                    <a href="./" class="eventSlide">
                         <img src="./img/speicial_event_6.jpg" draggable="false" alt="">
                         <p>某個特賣品</p>
                     </a>
-                    <a href="./" class="event_show">
+                    <a href="./" class="eventSlide">
                         <img src="./img/speicial_event_7.jpg" draggable="false" alt="">
                         <p>夏季特賣活動</p>
                     </a>
-                    <a href="./" class="event_show">
+                    <a href="./" class="eventSlide">
                         <img src="./img/speicial_event_8.jpg" draggable="false" alt="">
                         <p>還有個活動</p>
                     </a>
-                    <a href="./" class="event_show">
+                    <a href="./" class="eventSlide">
                         <img src="./img/speicial_event_9.jpg" draggable="false" alt="">
                         <p>不知道甚麼活動</p>
                     </a>
-                    <a href="./" class="event_show">
+                    <a href="./" class="eventSlide">
                         <img src="./img/speicial_event_10.jpg" draggable="false" alt="">
                         <p>好的活動</p>
                     </a>
@@ -181,31 +175,6 @@
                 <a class="next" onclick="plusEventSlides(1)">&#10095;</a>
             </div>
         </div>
-
-
-
-        <script>
-            function plusEventSlides(n) {
-            if (n > 0) {
-                rotateSlidesForward();
-            } else {
-                rotateSlidesBackward();
-            }
-            }
-
-            function rotateSlidesForward() {
-            let container = document.querySelector('.event_show_slide');
-            let firstSlide = container.querySelector('.event_show');
-            container.appendChild(firstSlide);
-            }
-
-            function rotateSlidesBackward() {
-            let container = document.querySelector('.event_show_slide');
-            let slides = container.querySelectorAll('.event_show');
-            let lastSlide = slides[slides.length - 1];
-            container.insertBefore(lastSlide, slides[0]);
-            }
-            </script>
 
 
 <!---------------------- 推薦商品 ---------------------->

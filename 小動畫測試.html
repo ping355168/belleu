@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <title>Document</title>
+
+    <style>
+        /*-----How to enjoy start-----*/
+        .enjoy h1 {
+            color: #BDA074;
+            font-size: 2.25rem;
+            line-height: 55px;
+            text-align: center;
+
+            margin: 80px 0 60px;
+        }
+
+
+
+        /* 
+        .enjoy li .fa-cart-shopping, */
+        /* .enjoy li .fa-cookie-bite, */
+        .enjoy li .circle {
+            width: 200px;
+            height: 200px;
+
+            background-color: #FEFBF6;
+            /* color: #BDA074; */
+            border: 1px solid #BDA074;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            overflow: hidden;
+            /*不讓卡車超過圓形*/
+            position: relative;
+        }
+
+        .fa-truck {
+            position: absolute;
+            top: 50%;
+            left: -50px;
+            transform: translateY(-50%);
+            animation: drive 2.5s cubic-bezier(.11, .97, .57, -0.6) infinite;
+        }
+
+        @keyframes drive {
+            0% {
+                left: -50px;
+            }
+
+            100% {
+                left: calc(100% + 4rem);
+            }
+        }
+
+        /* ---------------購物車------------- */
+
+        .fa-arrow-pointer {
+            z-index: 1;
+            position: absolute;
+            top: 46%;
+            left: 202px;
+            /*跑到Left123*/
+
+            margin: auto;
+            animation: arrow 1.5s linear;
+        }
+
+        @keyframes arrow {
+            0% {
+                transform: scale(1);
+                /* top: 50%; */
+                left: 200px;
+            }
+
+            50% {
+                transform: scale(1);
+                /* top:66%; */
+                left: 124px;
+            }
+
+            /* 80% {
+                transform: scale(.9);
+                top:66%;
+                left: 124px;
+            }
+
+            80% {
+                transform: scale(.8);
+                top:66%;
+                left: 124px;
+            }
+            90% {
+                transform: scale(.8);
+                top:66%;
+                left: 124px;
+            } */
+
+            100% {
+                transform: scale(1);
+                /* top: 63%; */
+                left: 124px;
+            }
+        }
+
+
+        .fa-cart-shopping {
+            animation: cart1 .3s .9s linear;
+        }
+
+        @keyframes cart1 {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(.8);
+            }
+
+            70% {
+                transform: scale(.8);
+            }
+
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* .fa-cart-arrow-down {
+            position: absolute;
+            top: 34%;
+            left: 64px;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+
+            display: none;
+        } */
+
+
+        /* ---------------餅乾------------- */
+
+        .enjoy li .fa-cookie {
+            /*完整餅乾*/
+            display: none;
+        }
+
+
+        .enjoy li .fa-cookie-bite {
+            /*咬一口*/
+            display: none;
+        }
+
+        .circle img {
+            /*咬兩口*/
+            max-width: 65px;
+        }
+
+
+
+
+
+        /* ------------大小顏色----------------- */
+        .enjoy li .fa-cart-shopping,
+        .enjoy li .fa-truck,
+        .enjoy li .fa-cart-arrow-down {
+            font-size: 4rem;
+            color: #BDA074;
+        }
+
+        .enjoy li .fa-arrow-pointer {
+            font-size: 2rem;
+            color: #bd7974
+        }
+
+        .enjoy .fa-cookie-bite,
+        .enjoy li .fa-cookie {
+            font-size: 4.5rem;
+            color: #BDA074;
+        }
+
+        .enjoy li h5 {
+            color: #292929;
+            font-size: 1.25rem;
+            line-height: 36x;
+            text-align: center;
+            margin-top: 24px;
+        }
+
+
+        .enjoy ul {
+            border: 2px solid red;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 240px;
+
+        }
+
+        .enjoy li {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            border: 2px solid red;
+            margin-bottom: 80px;
+        }
+
+        /*-----How to enjoy end-----*/
+    </style>
+
+</head>
+
+
+<body>
+    <!-- -----How to enjoy start----- -->
+    <section class="enjoy">
+        <h1>How to enjoy？</h1>
+        <ul>
+            <li>
+                <div class="circle">
+                    <i class="fa-solid fa-arrow-pointer"></i>
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <!-- <i class="fa-solid fa-cart-arrow-down"></i> -->
+                </div>
+                <h5>加入購物車</h5>
+            </li>
+            <li class="truck-container">
+                <div class="circle">
+                    <i class="fa-solid fa-truck"></i>
+                </div>
+                <h5>單筆滿NT$1,000免運</h5>
+            </li>
+            <li>
+                <div class="circle">
+                    <i class="fa-solid fa-cookie"></i>
+                    <i class="fa-solid fa-cookie-bite"></i>
+                    <img src="./cookie-bite2.svg" alt="">
+                </div>
+                <h5>享用並沉浸其中</h5>
+            </li>
+        </ul>
+    </section>
+    <!-- -----How to enjoy end----- -->
+</body>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const pointer = document.querySelector('.fa-arrow-pointer');
+    const cart = document.querySelector('.fa-cart-shopping');
+
+    function resetPointerAnimation() {
+        pointer.style.animation = 'none'; // 重設動畫
+        pointer.offsetHeight; // 觸發重排以應用更改
+        pointer.style.animation = '';
+    }
+
+    function resetCartAnimation() {
+        cart.style.animation = 'none'; // 重設動畫
+        cart.offsetHeight; // 觸發重排以應用更改
+        cart.style.animation = '';
+    }
+
+    function startPointerAnimation() {
+        pointer.style.animation = 'arrow 1.3s linear';
+        pointer.style.animationPlayState = 'running';
+    }
+
+    function startCartAnimation() {
+        cart.style.animation = 'cart1 .3s .9s linear';
+        cart.style.animationPlayState = 'running';
+    }
+
+    // 監聽滑鼠動畫結束事件
+    pointer.addEventListener('animationend', function () {
+        startCartAnimation(); // 開始購物車動畫
+    });
+
+    setInterval(function () {
+        resetPointerAnimation(); // 重設指針動畫
+        resetCartAnimation(); // 重設購物車動畫
+        startPointerAnimation(); // 開始指針動畫
+    }, 2500 ); // 每2.5秒重設並開始動畫
+});
+
+
+
+
+</script>
+
+</html>

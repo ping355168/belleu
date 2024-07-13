@@ -1,169 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"
-    />
-    <style>
-                * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        }
-        .container {
-        width: 100vw;
-        position: relative;
-        overflow: hidden;
-        }
-        .slides {
-        display: flex;
-        height: 100%;
-        }
-        .slide {
-        min-width: 100%;
-        position: relative;
-        }
-        .slide img {
-        width: 100%;
-        height: 100%;
-        }
-        .slide-controls {
-        position: absolute;
-        top: 50%;
-        left: 0;
-        transform: translateY(-50%);
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        }
-        #next-btn,
-        #prev-btn {
-        cursor: pointer;
-        background: transparent;
-        font-size: 30px;
-        border: none;
-        padding: 10px;
-        color: white;
-        }
-        #next-btn:focus,
-        #prev-btn:focus {
-        outline: none;
-        }
-        .slide-content {
-        position: absolute;
-        top: 50%;
-        left: 50px;
-        transform: translateY(-50%);
-        font-size: 60px;
-        color: white;
-        }
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Modal</title>
+  <link href="./css/test.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js">
+  <script defer src="./js/test.js"></script>
+</head>
+<body>
+  <div class="popup">
+    <button data-modal-target="#modal">Open Modal</button>
+    <div class="modal" id="modal">
+      <div class="modal-header">
+        <button data-close-button class="close-button">&times;</button>
+        <div class="login_system">
+          <div class="login">登入</div>
+          <div class="register">註冊</div>
+        </div>
 
-    </style>
-    <title>Infinite Slideshow : non-degree programmer</title>
-  </head>
-  <body>
-    <div class="container">
-      <div class="slides">
-        <div class="slide">
-          <img src="./img/backgound_1.jpg" alt="" />
-        </div>
-        <div class="slide">
-          <img src="./img/backgound_2.jpg" alt="" />
-        </div>
-        <div class="slide">
-          <img src="./img/backgound_3.jpg" alt="" />
-        </div>
-        <div class="slide">
-          <img src="./img/backgound_4.jpg" alt="" />
-        </div>
       </div>
-      <div class="slide-controls">
-        <button id="prev-btn">
-          <i class="fas fa-chevron-left"></i>
-        </button>
-        <button id="next-btn">
-          <i class="fas fa-chevron-right"></i>
-        </button>
+      <div class="modal-body">
+
+        <input type="account" placeholder="會員帳號/電子郵件">
+        <input type="password" placeholder="會員密碼">
+        <input type="submit" class="sumbit" value="登入">
+        <div class="label_buttons">
+          <label for="">保持登入</label><input type="checkbox">
+          <label for="">記住帳號</label><input type="checkbox">
+        </div>
       </div>
     </div>
-    <script>
-        const slideContainer = document.querySelector('.container');
-const slide = document.querySelector('.slides');
-const nextBtn = document.getElementById('next-btn');
-const prevBtn = document.getElementById('prev-btn');
-const interval = 4000;
-
-let slides = document.querySelectorAll('.slide');
-let index = 1;
-let slideId;
-
-const firstClone = slides[0].cloneNode(true);
-const lastClone = slides[slides.length - 1].cloneNode(true);
-
-firstClone.id = 'first-clone';
-lastClone.id = 'last-clone';
-
-slide.append(firstClone);
-slide.prepend(lastClone);
-
-const slideWidth = slides[index].clientWidth;
-
-slide.style.transform = `translateX(${-slideWidth * index}px)`;
-
-console.log(slides);
-
-const startSlide = () => {
-  slideId = setInterval(() => {
-    moveToNextSlide();
-  }, interval);
-};
-
-const getSlides = () => document.querySelectorAll('.slide');
-
-slide.addEventListener('transitionend', () => {
-  slides = getSlides();
-  if (slides[index].id === firstClone.id) {
-    slide.style.transition = 'none';
-    index = 1;
-    slide.style.transform = `translateX(${-slideWidth * index}px)`;
-  }
-
-  if (slides[index].id === lastClone.id) {
-    slide.style.transition = 'none';
-    index = slides.length - 2;
-    slide.style.transform = `translateX(${-slideWidth * index}px)`;
-  }
-});
-
-const moveToNextSlide = () => {
-  slides = getSlides();
-  if (index >= slides.length - 1) return;
-  index++;
-  slide.style.transition = '.7s ease-out';
-  slide.style.transform = `translateX(${-slideWidth * index}px)`;
-};
-
-const moveToPreviousSlide = () => {
-  if (index <= 0) return;
-  index--;
-  slide.style.transition = '.7s ease-out';
-  slide.style.transform = `translateX(${-slideWidth * index}px)`;
-};
-
-slideContainer.addEventListener('mouseenter', () => {
-  clearInterval(slideId);
-});
-
-slideContainer.addEventListener('mouseleave', startSlide);
-nextBtn.addEventListener('click', moveToNextSlide);
-prevBtn.addEventListener('click', moveToPreviousSlide);
-
-startSlide();
-
-    </script>
-  </body>
+    <div id="overlay"></div>
+  </div>
+</body>
 </html>

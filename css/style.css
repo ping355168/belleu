@@ -84,7 +84,7 @@ header{
     outline: none;
 }
 
-header.scrolled {
+.scrolled {
     position: fixed;
     top: 0;
     background: none;
@@ -93,11 +93,11 @@ header.scrolled {
     border-bottom: 1px solid #999; 
 }
 
-header.scrolled a {
+.scrolled a {
     color: #4B4237;
 }
 
-header.scrolled input{
+.scrolled input{
     color: #4B4237;
     border-bottom: 1px solid #4b4237; 
 }

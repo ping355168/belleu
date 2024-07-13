@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        .circle {
+    position: relative;
+}
+
+.fa-arrow-pointer {
+    z-index: 1;
+    position: absolute;
+    top: 46%;
+    left: 202px;
+    margin: auto;
+    animation: arrow 1.3s linear infinite; /* 設置無限循環動畫 */
+}
+
+@keyframes arrow {
+    0% {
+        transform: scale(1);
+        left: 202px;
+    }
+    100% {
+        transform: scale(1);
+        left: 124px;
+    }
+}
+
+.fa-cart-shopping {
+    animation: cart1 .6s linear infinite; /* 設置無限循環動畫 */
+}
+
+@keyframes cart1 {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(.8);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+    </style>
+</head>
+<body>
+    <section class="enjoy">
+        <h1>How to enjoy？</h1>
+        <ul>
+            <li>
+                <div class="circle">
+                    <i class="fa-solid fa-arrow-pointer"></i>
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <!-- <i class="fa-solid fa-cart-arrow-down"></i> -->
+                </div>
+                <h5>加入購物車</h5>
+            </li>
+            <li class="truck-container">
+                <div class="circle">
+                    <i class="fa-solid fa-truck"></i>
+                </div>
+                <h5>單筆滿NT$1,000免運</h5>
+            </li>
+            <li>
+                <div class="circle">
+                    <i class="fa-solid fa-cookie"></i>
+                    <i class="fa-solid fa-cookie-bite"></i>
+                    <img src="./cookie-bite2.svg" alt="">
+                </div>
+                <h5>享用並沉浸其中</h5>
+            </li>
+        </ul>
+    </section>
+
+    <script src="./js/testyy.js"></script>
+</body>
+</html>
