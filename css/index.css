@@ -3,25 +3,30 @@
 @import url(style.css);
 
 /* 看板區*/
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+
 .container {
+    background-color: black;
     position: relative;
     overflow: hidden;
     }
     .slides {  
     display: flex;
+    position: relative;
 }
     .slide {
-    position: relative;
+    position: absolute;
+    z-index: 1;
     }
-    .slide img {
+    .slideImg {
         display: flex;
     width: 100vw;
     }
+    .nonono {
+    opacity: 0.5;
+    }
+
+
+
     .slide-controls {
     padding: 0 50px;
     position: absolute;
@@ -32,6 +37,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 100;
     }
 
     #next-btn,
@@ -44,6 +50,9 @@
     color: white;
     }
 
+    #next-btn:hover,    #prev-btn:hover{
+        background-color: #4B4237;
+    }
     #next-btn:focus,
     #prev-btn:focus {
     outline: none;
@@ -52,7 +61,7 @@
 .brand_introduction{
     width: 100vw;
     box-sizing: border-box;
-    padding: 100px 150px;
+    padding: 100px 0;
     position: relative;
     background-color: #F6F4EE;
     display: flex;
@@ -95,8 +104,8 @@
     user-select: none;
 }
 .eventSlides{
-    width: 100%;
-    height: auto;
+    width: calc(100vw - 300px);
+    margin: 0 auto;
     gap: 20px;
     display: flex;
     overflow: hidden;
@@ -177,7 +186,8 @@ iframe{
     color: #4B4237;
 }
 
-.information img {-o-user-drag: none;
+.information img {
+    -o-user-drag: none;
     width: 100px;
 }
 

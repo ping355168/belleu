@@ -1,79 +1,109 @@
-const slideContainer = document.querySelector('.container');
-const slide = document.querySelector('.slides');
-const nextBtn = document.getElementById('next-btn');
-const prevBtn = document.getElementById('prev-btn');
-const interval = 5000;
+let slideWidth = $('.slide').width()  
+let slideIndex = 0
+let prevIndex
+let nextIndex
+let slideCount = $('.slide').length 
+let autoTime = 5000
+$(window).ready(function(){
+  $('.slide').width(slideWidth);
+  $('.slide').eq(slideIndex).css({'position': 'relative'})
+  $('.slide').not($('.slide').eq(slideIndex)).css({'position': 'absolute',left:slideWidth})
+})
 
-let slides = document.querySelectorAll('.slide');
-let index = 1;
-let slideId;
 
-const firstClone = slides[0].cloneNode(true);
-const lastClone = slides[slides.length - 1].cloneNode(true);
 
-firstClone.id = 'first-clone';
-lastClone.id = 'last-clone';
+$(window).on('load resize', function(){
+  slideWidth = $('.slide').width(slideWidth);
+  $('.slide').eq(slideWidth).css({left:0,})
+  console.log(slideWidth)
+  $('.slide').not($('.slide').eq(slideIndex)).css({left:slideWidth,})
+})
 
-slide.append(firstClone);
-slide.prepend(lastClone);
 
-const slideWidth = slides[index].clientWidth;
 
-slide.style.transform = `translateX(${-slideWidth * index}px)`;
+function slideToTheNext(){
+  {
+    slideWidth = $(window).width()
+    $('#next-btn').prop('disabled', true);
+    $('#prev-btn').prop('disabled', true);
+  
+      if(slideIndex < (slideCount - 1) ){
+        nextIndex = slideIndex + 1
+      }else if (slideIndex == (slideCount - 1) ){
+        nextIndex = 0
+      }else{
+        slideIndex = 0
+        nextIndex = slideIndex + 1
+      }
+  
+      $('.slideImg').eq(slideIndex).addClass('nonono')
+    $('.slide').eq(slideIndex).css({'position': 'relative',left:0,zIndex:2})
+    $('.slide').not($('.slide').eq(slideIndex)).css({'position': 'absolute',left:slideWidth + 'px',zIndex:3})
+    $('.slide').eq(nextIndex).animate({left: 0},"slow", function() {
+      $('.slide').eq(slideIndex).css({'position': 'absolute'})
+      $('.slideImg').eq(slideIndex).removeClass('nonono')
+      $('.slide').eq(nextIndex).css({'position': 'relative',zIndex:2}) 
+      $('.slide').eq(slideIndex).css({'position': 'absolute',left:slideWidth,zIndex:(slideCount - slideIndex)})
+      slideIndex += 1;
+  
+      $('#next-btn').prop('disabled', false);
+      $('#prev-btn').prop('disabled', false);
+      resetAutoSlide();
+    })
+    }
+}
+  function slideToThePrev(){
+    $('#next-btn').prop('disabled', true);
+    $('#prev-btn').prop('disabled', true);
+  
+    if(slideIndex == 0 ){
+      prevIndex = slideCount - 1;
+      $('.slide').eq(slideIndex).css({zIndex:3})
+    }else if(slideIndex < 0 ){
+      slideIndex = slideCount - 1
+      prevIndex = slideIndex - 1;
+    }else{
+      prevIndex = slideIndex - 1
+    }
+    $('.slideImg').eq(slideIndex).addClass('nonono')
+    
+    $('.slide').eq(slideIndex).css({'position': 'relative',left:0})
+    $('.slide').not($('.slide').eq(slideIndex)).css({'position': 'absolute',left:-slideWidth,zIndex:3})
+    $('.slide').eq(prevIndex).css({'position': 'absolute',left:-slideWidth,zIndex:(8-prevIndex)})
+    $('.slide').eq(prevIndex).animate({left:0,},"slow", function() {
+      $('.slide').eq(slideIndex).css({'position': 'absolute',left:-slideWidth})
+      $('.slideImg').eq(slideIndex).removeClass('nonono')
+      $('.slide').eq(prevIndex).css({'position': 'relative'}) 
+      slideIndex -= 1;
+  
+      $('#next-btn').prop('disabled', false);
+      $('#prev-btn').prop('disabled', false);
+      resetAutoSlide();
+    })
+    }
 
-console.log(slides);
+  let TimeTravel
+  function autoSlide(){
+    TimeTravel = setInterval(slideToTheNext,autoTime)
 
-const startSlide = () => {
-  slideId = setInterval(() => {
-    moveToNextSlide();
-  }, interval);
-};
-
-const getSlides = () => document.querySelectorAll('.slide');
-
-slide.addEventListener('transitionend', () => {
-  slides = getSlides();
-  if (slides[index].id === firstClone.id) {
-    slide.style.transition = 'none';
-    index = 1;
-    slide.style.transform = `translateX(${-slideWidth * index}px)`;
+  }
+  function StopAutoSlide(){
+    clearInterval(TimeTravel)
   }
 
-  if (slides[index].id === lastClone.id) {
-    slide.style.transition = 'none';
-    index = slides.length - 2;
-    slide.style.transform = `translateX(${-slideWidth * index}px)`;
+  function resetAutoSlide() {
+    StopAutoSlide();
+    autoSlide();
   }
-});
 
-const moveToNextSlide = () => {
-  slides = getSlides();
-  if (index >= slides.length - 1) return;
-  index++;
-  slide.style.transition = '.7s ease-out';
-  slide.style.transform = `translateX(${-slideWidth * index}px)`;
-};
+  autoSlide();
 
-const moveToPreviousSlide = () => {
-  if (index <= 0) return;
-  index--;
-  slide.style.transition = '.7s ease-out';
-  slide.style.transform = `translateX(${-slideWidth * index}px)`;
-};
+  $('#prev-btn').click(function() {
+    StopAutoSlide();
+    slideToThePrev();
+  })
 
-const resetSlideTimer = () => {
-  clearInterval(slideId);
-  startSlide();
-};
-
-nextBtn.addEventListener('click', () => {
-  moveToNextSlide();
-  resetSlideTimer();
-});
-
-prevBtn.addEventListener('click', () => {
-  moveToPreviousSlide();
-  resetSlideTimer();
-});
-
-startSlide();
+  $('#next-btn').click(function(){
+    StopAutoSlide();
+    slideToTheNext()
+  })
