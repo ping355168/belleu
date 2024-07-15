@@ -4,21 +4,6 @@ let prevIndex
 let nextIndex
 let slideCount = $('.slide').length 
 let autoTime = 5000
-$(window).ready(function(){
-  $('.slide').width(slideWidth);
-  $('.slide').eq(slideIndex).css({'position': 'relative'})
-  $('.slide').not($('.slide').eq(slideIndex)).css({'position': 'absolute',left:slideWidth})
-})
-
-
-
-$(window).on('load resize', function(){
-  slideWidth = $('.slide').width(slideWidth);
-  $('.slide').eq(slideWidth).css({left:0,})
-  console.log(slideWidth)
-  $('.slide').not($('.slide').eq(slideIndex)).css({left:slideWidth,})
-})
-
 
 
 function slideToTheNext(){
@@ -37,8 +22,10 @@ function slideToTheNext(){
       }
   
       $('.slideImg').eq(slideIndex).addClass('nonono')
-    $('.slide').eq(slideIndex).css({'position': 'relative',left:0,zIndex:2})
-    $('.slide').not($('.slide').eq(slideIndex)).css({'position': 'absolute',left:slideWidth + 'px',zIndex:3})
+    $('.slide').eq(slideIndex).css({'position': 'relative',left:0,zIndex:3})
+    $('.slide').not($('.slide').eq(slideIndex)).css({'position': 'absolute',left:slideWidth + 'px',zIndex:2})
+
+    $('.slide').eq(nextIndex).css({left:$(window).width() + 'px',zIndex:4})
     $('.slide').eq(nextIndex).animate({left: 0},"slow", function() {
       $('.slide').eq(slideIndex).css({'position': 'absolute'})
       $('.slideImg').eq(slideIndex).removeClass('nonono')

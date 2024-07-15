@@ -13,10 +13,6 @@
     display: flex;
     position: relative;
 }
-    .slide {
-    position: absolute;
-    z-index: 1;
-    }
     .slideImg {
         display: flex;
     width: 100vw;
