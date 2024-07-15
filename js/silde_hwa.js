@@ -23,14 +23,15 @@ function slideToTheNext(){
   
       $('.slideImg').eq(slideIndex).addClass('nonono')
     $('.slide').eq(slideIndex).css({'position': 'relative',left:0,zIndex:3})
-    $('.slide').not($('.slide').eq(slideIndex)).css({'position': 'absolute',left:slideWidth + 'px',zIndex:2})
+    $('.slide').not($('.slide').eq(slideIndex)).css({zIndex:2})
 
-    $('.slide').eq(nextIndex).css({left:$(window).width() + 'px',zIndex:4})
+    $('.slide').eq(nextIndex).css({'position': 'absolute',left:$(window).width() + 'px',zIndex:4})
+
     $('.slide').eq(nextIndex).animate({left: 0},"slow", function() {
       $('.slide').eq(slideIndex).css({'position': 'absolute'})
       $('.slideImg').eq(slideIndex).removeClass('nonono')
-      $('.slide').eq(nextIndex).css({'position': 'relative',zIndex:2}) 
-      $('.slide').eq(slideIndex).css({'position': 'absolute',left:slideWidth,zIndex:(slideCount - slideIndex)})
+      $('.slide').eq(nextIndex).css({'position': 'relative',zIndex:3}) 
+      $('.slide').eq(slideIndex).css({'position': 'absolute',left:slideWidth,zIndex:2})
       slideIndex += 1;
   
       $('#next-btn').prop('disabled', false);
