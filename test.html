@@ -1,38 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Modal</title>
-  <link href="./css/test.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js">
-  <script defer src="./js/test.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinite Scrolling Waterfall</title>
+    <style>
+        #container {
+            width: 100%;
+            position: relative;
+        }
+        .item {
+            width: 200px;
+            margin: 10px;
+            background-color: #ccc;
+            float: left;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-  <div class="popup">
-    <button data-modal-target="#modal">Open Modal</button>
-    <div class="modal" id="modal">
-      <div class="modal-header">
-        <button data-close-button class="close-button">&times;</button>
-        <div class="login_system">
-          <div class="login">登入</div>
-          <div class="register">註冊</div>
-        </div>
+    <div id="container"></div>
+    <script>
+        var container = $('#container');
+        var items = [];  // 假設這裡有一組初始項目數據
+        var columnWidth = 220; // 項目寬度 + 間距
+        var columns = Math.floor($(window).width() / columnWidth);
+        var columnHeights = Array(columns).fill(0);
 
-      </div>
-      <div class="modal-body">
+        function layoutItems(items) {
+            items.forEach(function(item) {
+                var minHeight = Math.min.apply(null, columnHeights);
+                var index = columnHeights.indexOf(minHeight);
+                item.css({
+                    top: minHeight,
+                    left: index * columnWidth
+                });
+                columnHeights[index] += item.outerHeight() + 10; // 項目高度 + 間距
+                container.append(item);
+            });
+        }
 
-        <input type="account" placeholder="會員帳號/電子郵件">
-        <input type="password" placeholder="會員密碼">
-        <input type="submit" class="sumbit" value="登入">
-        <div class="label_buttons">
-          <label for="">保持登入</label><input type="checkbox">
-          <label for="">記住帳號</label><input type="checkbox">
-        </div>
-      </div>
-    </div>
-    <div id="overlay"></div>
-  </div>
+        $(window).on('scroll', function() {
+            if ($(window).scrollTop() + $(window).height() >= $(document).height() - 100) {
+                // 加載更多項目
+                loadMoreItems();
+            }
+        });
+
+        function loadMoreItems() {
+            // 模擬 AJAX 請求加載新項目
+            var newItems = [];
+            for (var i = 0; i < 10; i++) {
+                var newItem = $('<div class="item">New Item</div>');
+                newItems.push(newItem);
+            }
+            layoutItems(newItems);
+        }
+
+        // 初始化佈局
+        layoutItems(items);
+    </script>
 </body>
 </html>

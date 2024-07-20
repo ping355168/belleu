@@ -1,36 +1,36 @@
-const openModalButtons = document.querySelectorAll('[data-modal-target]')
-const closeModalButtons = document.querySelectorAll('[data-close-button]')
-const overlay = document.getElementById('overlay')
+const openModalButtons = $('[data-modal-target]');
+const closeModalButtons = $('[data-close-button]');
+const overlay = $('#overlay');
 
-openModalButtons.forEach(button => {
-  button.addEventListener('click', () => {
-    const modal = document.querySelector(button.dataset.modalTarget)
-    openModal(modal)
-  })
-})
+openModalButtons.each(function() {
+  $(this).on('click', function() {
+    const modal = $($(this).data('modal-target'));
+    openModal(modal);
+  });
+});
 
-overlay.addEventListener('click', () => {
-  const modals = document.querySelectorAll('.modal.active')
-  modals.forEach(modal => {
-    closeModal(modal)
-  })
-})
+overlay.on('click', function() {
+  const modals = $('.modal.active');
+  modals.each(function() {
+    closeModal($(this));
+  });
+});
 
-closeModalButtons.forEach(button => {
-  button.addEventListener('click', () => {
-    const modal = button.closest('.modal')
-    closeModal(modal)
-  })
-})
+closeModalButtons.each(function() {
+  $(this).on('click', function() {
+    const modal = $(this).closest('.modal');
+    closeModal(modal);
+  });
+});
 
 function openModal(modal) {
-  if (modal == null) return
-  modal.classList.add('active')
-  overlay.classList.add('active')
+  if (modal.length === 0) return;
+  modal.addClass('active');
+  overlay.addClass('active');
 }
 
 function closeModal(modal) {
-  if (modal == null) return
-  modal.classList.remove('active')
-  overlay.classList.remove('active')
+  if (modal.length === 0) return;
+  modal.removeClass('active');
+  overlay.removeClass('active');
 }

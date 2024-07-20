@@ -1,0 +1,62 @@
+@import url(reset.css);
+@import url(style.css);
+
+
+.button a,.header_right li a{
+    text-decoration: none;
+    color: #4B4237;
+}
+header{
+    background: none;
+    background-color: #F6F4EE;
+    color: #4B4237;
+    border-bottom: 1px solid #999; 
+}
+
+.button a,.header_right li a{
+    text-decoration: none;
+    color: #4B4237;
+}
+.LOGO a{
+    color: #4B4237;
+}
+
+.menu a {
+    display: block;
+    margin: 5px 0;
+    cursor: pointer;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.header_right input{
+    width: 60px;
+    display: block;
+    border: none;
+    border-bottom: 1px solid #4B4237; 
+    background:none ;
+}
+
+
+.termsOfUse{
+    width: 1000px; /* 設定容器寬度 */
+    height: 200px; /* 設定容器高度 */
+    overflow: auto; /* 添加滾動條 */
+    border: 1px solid #ccc; /* 加上邊框 */
+    padding: 10px; /* 加上內邊距 */
+}
+
+main{
+    box-sizing: border-box;
+    padding: 60px 0;
+    width: calc(100vw - 350px);
+    margin: 0 auto;
+}
+
+.termsOfUse{
+    margin: 0 auto;
+}
+
+main h1{
+    text-align: center;
+}

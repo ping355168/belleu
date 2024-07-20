@@ -1,0 +1,109 @@
+header{
+    width: 100%;
+    height: 60px;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.30) 0%, rgba(56, 56, 56, 0.23) 49%, rgba(230, 230, 230, 0.00) 100%);
+    
+    padding: 0 60px;
+    box-sizing: border-box;
+
+    font-size: 1.6em;
+    color: white;
+
+    z-index: 200;
+}
+
+.header_left {
+    display: flex;
+}
+
+.LOGO a{
+    color: white;
+    font-family: gaegu;
+    font-size: 2.4em;
+    margin-right: 20px;
+    text-decoration: none;
+}
+.header_buttons{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.button{
+    display: flex;
+    justify-content: center;
+}
+
+.button,.header_right li{
+    margin:0 10px 0 10px ;
+}
+
+.button a,.header_right li a{
+    text-decoration: none;
+    color: white;
+}
+
+.header_right ul{
+    display: flex;
+    align-items: center;
+}
+
+.header_right input{
+    width:200px;
+    display: block;
+    border: none;
+    border-bottom: 1px solid white; 
+    background:none ;
+}
+
+.header_right input:focus {
+    outline: none;
+}
+
+.scrolled {
+    position: fixed;
+    top: 0;
+    background: none;
+    background-color: #F6F4EE;
+    color: #4B4237;
+    border-bottom: 1px solid #999; 
+}
+.scrolled .header_right li a{
+    color: #4B4237;
+}
+.scrolled a {
+    color: #4B4237;
+}
+
+.scrolled input{
+    color: #4B4237;
+    border-bottom: 1px solid #4b4237; 
+}
+
+.button_list{
+    width: 100px;
+    display: none;
+    margin-top: 15px;
+    background-color: #F6F4EE;
+    position: absolute;
+    color: #4B4237;
+    padding: 10px;
+}
+.button_list a{
+    padding: 5px 10px;
+    display: block;
+    color: #4B4237;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+.button a:hover + .button_list,.button_list:hover,.button_list a:hover{
+    display: block;
+}
+.button_list a:hover{
+    background: #EDE7D9;
+}
