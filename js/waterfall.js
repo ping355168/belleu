@@ -35,8 +35,12 @@ $(document).ready(function() {
     closeModal(modal);
   });
 
-  $('.waterfall #post').on('click', function() {
+  $('.waterfall #modal').on('click', function() {
     const modalTarget = $(this).data('modal-target');
     openModal(modalTarget, $(this));
   });
 });
+
+
+
+

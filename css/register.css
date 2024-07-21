@@ -60,3 +60,14 @@ main{
 main h1{
     text-align: center;
 }
+
+nav ul li a{
+    color: #4B4237;
+    
+}
+section ul li a{
+    color: #4B4237
+}
+section ul li input{
+    border-bottom:1px solid #4B4237;
+}

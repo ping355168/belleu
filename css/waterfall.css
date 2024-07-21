@@ -184,11 +184,20 @@ background-color: rgba(0,0,0,0.8);
 }
 
 .waterfall{
-    display: flex;
-    flex-wrap: wrap;
+    width: calc(100vw - 550px);
+    column-count: 6; /* 設置列數 */
+    column-gap: 1em;
 }
-#post img{
-    width: calc((100vw - 550px) * 0.16666);
+.item1, .item2,.item3,.item4,.item5,.item6{
+    break-inside: avoid; /* 防止元素在列中斷裂 */
+    margin-bottom: 1em; /* 底部間距 */
+}
+.item1 img, .item2 img,.item3 img,.item4 img,.item5 img,.item6 img{
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: 50% 50%;;
+
 }
 
 
