@@ -38,7 +38,7 @@
 
 
 .popular_items img {-o-user-drag: none;
-    width: calc((100vw - 300px - 80px) * 0.20);
+    width: calc((100vw - 300px - 60px) * 0.25);
 }
 
 .slideshow-container{
@@ -92,6 +92,10 @@ background-color: rgba(0,0,0,0.8);
 .product_text_area > h1{
     font-size: 24px;
     margin-bottom: 10px;
+}
+
+.product{
+    overflow: visible;
 }
 
 .today_week_month{

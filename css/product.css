@@ -247,7 +247,11 @@ header{
     color: #4B4237;
     
 }
-
+.mySlides img {
+    width: 50vw;
+    height: 100vh;
+    object-fit: cover;
+}
 .cell2 {
     text-align: center;
     padding: 10px 20px;
@@ -347,7 +351,7 @@ th{
     box-sizing: border-box;
 }
 .popular_items img {-o-user-drag: none;
-    width: calc((100vw - 300px - 80px) * 0.20);
+    width: calc((100vw - 300px - 60px) * 0.25);
 }
 
 
@@ -488,3 +492,96 @@ th{
     text-align: center;
 }
 
+
+
+.button a,.header_right li a{
+    text-decoration: none;
+    color: #4B4237;
+}
+header{
+    background: none;
+    background-color: #F6F4EE;
+    color: #4B4237;
+    border-bottom: 1px solid #999; 
+}
+
+.button a,.header_right li a{
+    text-decoration: none;
+    color: #4B4237;
+}
+.LOGO a{
+    color: #4B4237;
+}
+
+.menu a {
+    display: block;
+    margin: 5px 0;
+    cursor: pointer;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.header_right input{
+    width: 60px;
+    display: block;
+    border: none;
+    border-bottom: 1px solid #4B4237; 
+    background:none ;
+}
+
+nav ul li a{
+    color: #4B4237;
+    
+}
+section ul li a{
+    color: #4B4237
+}
+section ul li input{
+    border-bottom:1px solid #4B4237;
+}
+
+main{
+    box-sizing: border-box;
+    padding: 120px 0;
+    width: calc(100vw - 350px);
+    margin: 0 auto;
+}
+.product{
+    overflow: visible;
+}
+main h1{
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+    color: #4B4237;
+    margin-bottom: 40px;
+}
+main ul{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 50px;
+}
+main ul li{
+    color: #4B4237;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+main ul li i{
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+main ul li div{
+    width: 150px;
+    height: 2px;
+    background-color: #A49694;
+}
+main ul li h2{
+    text-align: center;
+    font-size: 14px;
+}
+main ul li:not(:nth-of-type(3)){
+    color: #A49694;
+}

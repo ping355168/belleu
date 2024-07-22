@@ -39,16 +39,16 @@ header{
 
 
 .termsOfUse{
-    width: 1000px; /* 設定容器寬度 */
+    width: calc(100vw - 350px); /* 設定容器寬度 */
     height: 200px; /* 設定容器高度 */
     overflow: auto; /* 添加滾動條 */
     border: 1px solid #ccc; /* 加上邊框 */
-    padding: 10px; /* 加上內邊距 */
+    padding: 40px; /* 加上內邊距 */
 }
 
 main{
     box-sizing: border-box;
-    padding: 60px 0;
+    padding: 120px 0;
     width: calc(100vw - 350px);
     margin: 0 auto;
 }
@@ -70,4 +70,76 @@ section ul li a{
 }
 section ul li input{
     border-bottom:1px solid #4B4237;
+}
+
+main h1{
+    font-size: 18px;
+    font-weight: bold;
+    color: #4B4237;
+    margin-bottom: 40px;
+}
+main ul{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 50px;
+}
+main ul li{
+    color: #4B4237;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+main ul li i{
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+main ul li div{
+    width: 150px;
+    height: 2px;
+    background-color: #A49694;
+}
+main ul li h2{
+    text-align: center;
+    font-size: 14px;
+}
+main ul li:not(:first-child){
+    color: #A49694;
+}
+.termsOfUse{
+    line-height: 150%;
+    color: #4B4237;
+}
+.termsOfUse h2{
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+
+}
+
+.termsOfUse h3{
+    font-size: 16px;
+}
+
+.termsOfUse p{
+    font-size: 14px;
+}
+
+.agreement{
+    margin-top: 20px;
+    font-size: 14px;
+    color: #4B4237;
+}
+
+.nextstop{
+    margin-top: 30px;
+    display: block;
+    padding: 10px 20px;
+    background-color: #4B4237;
+    color: white;
+    width: 80px;
+    text-decoration: none;
+    font-size: 14px;
+    text-align: center;
 }

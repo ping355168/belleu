@@ -36,9 +36,13 @@
     box-sizing: border-box;
 }
 
-
-.popular_items img {-o-user-drag: none;
-    width: calc((100vw - 300px - 80px) * 0.20);
+.product{
+    width: calc((100vw - 300px - 80px) * 0.25);
+    overflow:visible; 
+}
+.popular_items .product a img {
+    -o-user-drag: none;
+    width: calc((100vw - 300px - 80px) * 0.25);
 }
 
 .slideshow-container{

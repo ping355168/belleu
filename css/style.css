@@ -109,7 +109,9 @@ header section input:focus {
     padding: 10px 0;
 }
 
-
+.mySlides img{
+    width: 100vw;
+}
 
 /*------------------- 頁尾----------------------*/
 footer{
@@ -194,8 +196,42 @@ footer{
 /*------------------- 頁尾----------------------*/
 .product{
     position: relative;
+    overflow: hidden;
 }
 
+.product:hover a img{
+    opacity: 0.5;
+}
+.product:hover a img:not(:first-child){
+    display: none;
+}
+
+
+.product:hover p{
+    display: grid;
+}
+.product a p{
+    display: none;;
+    text-align: center;
+    color: #F6F4EE;
+    border: 1px solid #F6F4EE;
+    padding: 5px 10px;
+    font-size: 12px;
+    margin: auto auto;
+    grid-column: 1 /2;
+    grid-row: 1/ 2;
+    z-index: 10;
+}
+
+.product a img{
+    grid-column: 1/ 2;
+    grid-row: 1 /2;
+
+}
+.product > a{
+    background: #4B4237;
+    display: grid;
+}
 .products_area{
     width: 100vw;
     box-sizing: border-box;
@@ -332,8 +368,56 @@ footer{
     background-color: #ddd;
 }
 
+.floating-window img{
+    width:20vw;
+    border-radius: 12px;
+    box-shadow: 2px 2px 8px #4B4237;
 
+}
+.floating-window{
+    position: relative;
+    width:20vw
+}
+.window{
+    position: fixed;
+    bottom: 5px;
+    left: 0;
+    width:20vw;
+    z-index: 10;
 
+}
+.floating-window i{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 11;
+
+}
+.floating-window i:hover{
+    color: white;
+    cursor: pointer;
+}
+.floating-window-2{
+    position: fixed;
+    right: 0;
+    bottom: 30%;
+    z-index: 12;
+}
+.window-2 i:hover{
+    color: #E5AAA3;
+    cursor: pointer;
+}
+.window-2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;;
+    gap: 30px;
+    padding: 20px 15px 20px 20px; 
+    border-radius: 20px 0 0 20px ;
+    background-color: #A49694;
+    color: #F6F4EE;
+
+}
 
 @media screen and (max-width: 1280px) {
     header{
@@ -361,4 +445,8 @@ footer{
     .marquee{
         font-size: 12px;
     }    
+    .product_wall a img {
+        width: calc((100vw - 300px - 60px) * 0.25);
+    }
+    
 }

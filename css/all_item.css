@@ -1,0 +1,168 @@
+@import url(reset.css);
+@import url(style.css);
+
+
+
+/*----------------------推薦商品----------------------*/
+body{
+    width: 100vw;
+}
+.popular_items_area{
+    width: 100vw;
+    box-sizing: border-box;
+    padding: 100px 150px;
+    position: relative;
+    background-color:#F6F4EE ;
+}
+
+.popular_items_text_area{
+    text-align: center;
+    color: #736B60;
+}
+
+.popular_items_text_area h1{
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.popular_items_text_area p{
+    font-size: 16px;
+}
+
+.popular_items{
+    display:flex;
+    overflow: hidden;
+    gap:20px;
+    padding:40px 0;
+    box-sizing: border-box;
+}
+
+
+.popular_items img {-o-user-drag: none;
+    width: calc((100vw - 300px - 60px) * 0.25);
+}
+
+.slideshow-container{
+    box-sizing:border-box;
+    position: relative;
+}
+
+.slideshow-container img {-o-user-drag: none;
+    -webkit-user-drag: none;
+    width: 100%;
+    display: flex;
+}
+
+.mySlides {
+    display: none;
+}
+
+.slideshow-container>.prev, .slideshow-container>.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    user-select: none;
+}
+.product {
+    overflow: visible;
+}
+.slideshow-container>.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.slideshow-container>.prev {
+    left: 0;
+    border-radius: 0 3px 3px 0;
+}
+
+.slideshow-container>.prev:hover, .slideshow-container>.next:hover {
+background-color: rgba(0,0,0,0.8);
+}
+
+
+.product_text_area > img{
+    width: 4vw;
+    margin-bottom: 10px;
+}
+
+.product_text_area > h1{
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.today_week_month{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    font-weight: bold;
+}
+.DAY_BTN:hover{
+    padding: 10px 20px;
+    background-color: #E5AAA3;
+    border-radius: 20px;
+    font-size: 14px;
+    color: white;
+}
+
+.DAY_BTN{
+    padding: 10px 20px;
+    background-color: #F6F4EE;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+.laybie_img{
+    display: grid;
+    text-align: center;
+    color: #A49694;
+    text-decoration: none;
+    font-size: 14px;
+    
+}
+.laybie_img img{
+    
+    grid-column: 1/2;
+    grid-row: 1/2;
+    width: 40px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 40px;
+    border: 1px solid #A49694;
+}
+.fenlay{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+}
+
+
+.laybie_img img:not(:nth-child(2)){
+    display: none;
+}
+
+.laybie a:hover img:first-child{
+    display: block;
+}
+
+.laybie a:hover img:nth-child(2){
+    display: none;
+}
+
+.laybie a:hover p{
+    color: #4B4237;
+}
+
+.laybie_img p{
+    margin-top: 5px;
+}

@@ -12,7 +12,9 @@
     position: relative;
     background-color:#F6F4EE ;
 }
-
+.product{
+    overflow: visible;
+}
 .popular_items_text_area{
     text-align: center;
     color: #736B60;
@@ -38,5 +40,5 @@
 
 
 .popular_items img {-o-user-drag: none;
-    width: calc((100vw - 300px - 80px) * 0.20);
+    width: calc((100vw - 300px - 60px) * 0.25);
 }
