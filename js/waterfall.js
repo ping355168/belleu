@@ -1,46 +1,23 @@
-$(document).ready(function() {
-  const openModalButtons = $('[data-modal-target]');
-  const closeModalButtons = $('[data-close-button]');
-  const overlay = $('#overlay');
-  const modal = $('#modal');
-  const modalImage = $('#modal .modal-body img');
+  let postIndex = 0;
+  let $posts = $('#ig_posts .post');
 
-  openModalButtons.each(function() {
-    $(this).on('click', function() {
-      const modalTarget = $(this).data('modal-target');
-      openModal(modalTarget, $(this));
-    });
-  });
-
-  closeModalButtons.each(function() {
-    $(this).on('click', function() {
-      closeModal(modal);
-    });
-  });
-
-  function openModal(modalTarget, element) {
-    const postClass = element.attr('class');
-    const imgSrc = `./img/${postClass}.jpg`;
-    modalImage.attr('src', imgSrc);
-    $(modalTarget).addClass('active');
-    overlay.addClass('active');
+  function appendPosts(num) {
+      let $waterfall = $('#waterfall');
+      for (let i = 0; i < num; i++) {
+          let $post = $posts.eq(postIndex).clone();
+          $waterfall.append($post);
+          postIndex = (postIndex + 1) % $posts.length; // 
+      }
   }
 
-  function closeModal(modal) {
-    modal.removeClass('active');
-    overlay.removeClass('active');
-  }
+  appendPosts(16);
 
-  overlay.on('click', function() {
-    closeModal(modal);
+  $(window).scroll(function() {
+      if ($(window).scrollTop() + $(window).height() >= $(document).height() - 100) {
+          $('#loading').show();
+          setTimeout(function() {
+              appendPosts(11);
+              $('#loading').hide();
+          }, 500); 
+      }
   });
-
-  $('.waterfall #modal').on('click', function() {
-    const modalTarget = $(this).data('modal-target');
-    openModal(modalTarget, $(this));
-  });
-});
-
-
-
-

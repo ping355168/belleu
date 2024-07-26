@@ -76,10 +76,6 @@
     border-radius: 0 3px 3px 0;
 }
 
-.slideshow-container>.prev:hover, .slideshow-container>.next:hover {
-background-color: rgba(0,0,0,0.8);
-}
-
 .OOTD_area{
     width: calc(100vw - 300px);
     box-sizing: border-box;
@@ -108,7 +104,7 @@ background-color: rgba(0,0,0,0.8);
 
 .OOTD_text_area p{
     font-size: 16px;
-    margin-bottom: 5px;
+    margin-bottom: 30px;
     line-height: 23px;
 }
 .today_week_month{
@@ -137,7 +133,7 @@ background-color: rgba(0,0,0,0.8);
 
 
 .product a img{
-    width: calc((100vw - 300px - 100px)* 0.1666);
+    width: calc((100vw - 300px - 100px)* 0.25);
     height: 40vh;
     object-fit:cover;
     display: flex;;
@@ -154,9 +150,6 @@ background-color: rgba(0,0,0,0.8);
     transition:0.3s;
 }
 
-.product a img:hover{
-    transform: scale(1.1);
-}
 
 .function_select{
     width: 250px;
@@ -169,28 +162,31 @@ background-color: rgba(0,0,0,0.8);
 
 .function_select h3{
     color: #4B4237;
-    font-size: 28px;
+    font-size: 24px;
     font-weight: bold;
     margin-bottom: 20px;
 }
 
 .function_select .checkbox{
-    margin-top: 20px;
+    margin-top: 10px;
 }
 .function_select label{
-    font-size: 24px;
+    font-size: 16px;
     color: #4B4237;
 
 }
-
+.waterfall div p{
+    font-size: 14px;
+    padding: 5px;
+}
 .waterfall{
-    width: calc(100vw - 550px);
-    column-count: 6; /* 設置列數 */
-    column-gap: 1em;
+    width: calc(100vw - 300px);
+    column-count: 3; 
+    column-gap: 10px;
 }
 .item1, .item2,.item3,.item4,.item5,.item6{
-    break-inside: avoid; /* 防止元素在列中斷裂 */
-    margin-bottom: 1em; /* 底部間距 */
+    break-inside: avoid;  
+    margin-bottom: 1em; 
 }
 .item1 img, .item2 img,.item3 img,.item4 img,.item5 img,.item6 img{
     width: 100%;
@@ -274,3 +270,22 @@ background-color: rgba(0,0,0,0.8);
     border-bottom: 1px solid #4B4237;
 }
 
+
+.post {
+    display: inline-block;
+    width: 100%;
+    margin: 0 0 10px;
+    background-color: #f0f0f0;
+    padding: 10px;
+    box-sizing: border-box;
+    break-inside: avoid;
+}
+.post img {
+    width: 100%;
+    height: auto;
+}
+
+.product{
+    width: calc((100vw - 300px - 60px )* 0.25);
+    overflow: visible;
+}
