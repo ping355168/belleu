@@ -10,13 +10,13 @@ $(window).on('scroll', function() {
 $(document).ready(function() {
     $('#barlogo').click(function() {
         $('.barmenu').css('display', 'block').animate({
-            left: '-800px'
+            left: '-83vw'
         }, 200); 
     });
 
     $('#delete').click(function() {
         $('.barmenu').animate({
-            left: '100px'
+            left: '10vw'
         }, 200); 
     });
 });
