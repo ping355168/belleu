@@ -24,29 +24,76 @@
         <div class="LOGO">
             <a href="./index.html">BELLEU</a>
         </div>
+        <div class="bar">
+            
+            <i class="fa-solid fa-bars" id="barlogo"></i>
+            <div class="barmenu">
+                <div class="bartop">
+                    <h1>MENU</h1>
+                    <i class="fa-solid fa-x" id="delete"></i>
+                </div>
+                <div class="barsearch">
+                    <input type="text" id="searchbox" placeholder="輸入您想搜尋的商品">
+                    <i class="fa fa-search" id="barsearchicon">
+                    </i>
+                </div>
+                <a id="moblielogin" href="./login.html">會員登入</a>
+                <div class="barbut">
+                    <a href="./hot.html" class="bartag">熱門商品</a>
+                <a href="./new.html" class="bartag">最新商品</a>
+                    <a href="./today_arrival.html" class="bartag">今日配送</a>
+                    <a href="./1+1event.html" class="bartag">買一送一</a>
+                </div>
+                <div class="allitem">
+                    <div class="allitemmidtag">
+                        <div class="allitemmidtagtitle">上身區</div>
+                        <div class="allitemsmalltag">
+                            <a href="./page_shirt.html" class="allitemtag"><img src="./img/tanktop_active.svg" alt="" id="alitemimg"> 無袖上衣</a>
+
+                            <a href="./page_shirt_mid.html"class="allitemtag"><img src="./img/tshirt_active.svg" alt="" id="alitemimg"> 短袖上衣</a>
+                            <a href="./page_shirt_long.html"class="allitemtag"><img src="./img/longshirt_active.svg" alt="" id="alitemimg"> 長袖上衣</a>
+                        </div> 
+                    </div>
+                    <div class="allitemmidtag">
+                        <div class="allitemmidtagtitle">下身區</div>
+                        <div class="allitemsmalltag">
+                            <a href="./page_shorts.html" class="allitemtag"><img src="./img/shorts_active.svg" alt="" id="alitemimg"> 短褲</a>
+
+                            <a href="./page_shorts_long.html"class="allitemtag"><img src="./img/pants_active.svg" alt="" id="alitemimg"> 長褲</a>
+                            <a href="./page_skirt.html"class="allitemtag"><img src="./img/skirt_active.svg" alt="" id="alitemimg"> 短裙</a>
+                            <a href="./page_skirt_long.html"class="allitemtag"><img src="./img/longskirt_active.svg" alt="" id="alitemimg"> 長裙</a>
+                        </div> 
+                    </div>
+                    <div class="allitemmidtag">
+                        <div class="allitemmidtagtitle">配件區</div>
+                        <div class="allitemsmalltag">
+                            <a href="./page_cap.html" class="allitemtag"><img src="./img/caps_active.svg" alt="" id="alitemimg"> 帽子</a>
+
+                            <a href="./page_payjiang.html"class="allitemtag"><img src="./img/head_active.svg" alt="" id="alitemimg"> 頭飾</a>
+                            <a href="./page_socks.html"class="allitemtag"><img src="./img/socks_active.svg" alt="" id="alitemimg"> 襪子</a>
+                        </div> 
+                    </div>
+                
+                </div>
+            </div>
+        </div>
         <ul>
-            <li>                
-                <a href="./hot.html">熱門商品</a>
-            </li>
-            <li>   
-                <a href="./new.html">最新商品</a>
-            </li>
-            <li>   
-                <a href="./1+1event.html">買一送一</a>
-            </li>
-            <li>   
-               <a href="./today_arrival.html">今天出發</a>    
-            </li>
-            <li>
-                <a href="./all_iten.html">所有商品</a>
-            </li>
+            <li><a href="./hot.html">熱門商品</a></li>
+            <li><a href="./new.html">最新商品</a></li>
+            <li><a href="./1+1event.html">買一送一</a></li>
+            <li><a href="./today_arrival.html">今天出發</a></li>
+            <li><a href="./all_iten.html">所有商品</a></li>
 
         </ul>
     </nav>
     <section>
         <ul>
-            <li><input type="text"></li>
-            <li><i class="fa fa-search"></i></li>
+            <li>
+                    <input type="text">
+                    <i class="fa fa-search" id="searchicon">
+                    </i>
+            </li>
+            
             <li><a href="./login.html">登入</a></li>
             <li><a href="./registered.html">註冊</a></li>
         </ul>
@@ -93,8 +140,9 @@
             <div class="membership-container">
                 <div class="membership-level" onclick="toggleActive(this)">
                     <img src="./img/diamond_1.png" draggable="false" alt="">
-                    <h3 class="bronze">青銅會員</h3>
-                    <p>（加入即可）</p>
+                    <h3 class="bronze">青銅<span>會員</span></h3>
+                    <p class="small_p">（加入即可）</p>
+                    <p class="big_p">加入</p>
                     <ul class="benefits" >
                         <li id="benefits_bronze">專屬折扣</li>
                         <li id="benefits_bronze">積分回饋</li>
@@ -102,8 +150,10 @@
                 </div>
                 <div class="membership-level" onclick="toggleActive(this)">
                     <img src="./img/diamond_2.png" draggable="false" alt="">
-                    <h3 class="silver">白銀會員</h3>
-                    <p>（單季消費滿1,000元）</p>
+                    <h3 class="silver">白銀<span>會員</span></h3>
+                    <p class="small_p">（<span>單季消費</span>滿1,000元）</p>
+                    <p class="big_p">滿千</p>
+
                     <ul class="benefits" >
                         <li id="benefits_silver">專屬折扣</li>
                         <li id="benefits_silver">積分回饋</li>
@@ -112,8 +162,10 @@
                 </div>
                 <div class="membership-level" onclick="toggleActive(this)">
                     <img src="./img/diamond_3.png" draggable="false" alt="">
-                    <h3 class="gold">黃金會員</h3>
-                    <p>（單季消費滿3,000元）</p>
+                    <h3 class="gold">黃金<span>會員</span></h3>
+                    <p class="small_p">（<span>單季消費</span>滿3,000元）</p>
+                    <p class="big_p">滿三千</p>
+
                     <ul class="benefits" >
                         <li id="benefits_gold">專屬折扣</li>
                         <li id="benefits_gold">積分回饋</li>
@@ -123,8 +175,10 @@
                 </div>
                 <div class="membership-level" onclick="toggleActive(this)">
                     <img src="./img/diamond_4.png" draggable="false" alt="">
-                    <h3 class="platinum">白金會員</h3>
-                    <p>（單季消費滿5,000元）</p>
+                    <h3 class="platinum">白金<span>會員</span></h3>
+                    <p class="small_p">（ <span>單季消費</span>滿5,000元）</p>
+                    <p class="big_p">滿五千</p>
+
                     <ul class="benefits" >
                         <li id="benefits_platinum">專屬折扣</li>
                         <li id="benefits_platinum">積分回饋</li>
@@ -135,8 +189,10 @@
                 </div>
                 <div class="membership-level" onclick="toggleActive(this)">
                     <img src="./img/diamond_5.png" draggable="false" alt="">
-                    <h3 class="diamond">鑽石會員</h3>
-                    <p>（單季消費滿10,000元）</p>
+                    <h3 class="diamond">鑽石<span>會員</span></h3>
+                    <p class="small_p">（<span>單季消費</span>滿10,000元）</p>
+                    <p class="big_p">滿萬</p>
+
                     <ul class="benefits" >
                         <li id="benefits_diamond">專屬折扣</li>
                         <li id="benefits_diamond">積分回饋</li>

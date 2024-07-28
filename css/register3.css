@@ -119,3 +119,35 @@ main  section p{
     font-size: 14px;
     text-align: center;
 }
+
+@media screen and (max-width:990px){
+    main ul li div {
+        width: 100px;
+    }
+    main ul li {
+        width: 100px;
+    }
+
+}
+@media screen and (max-width:850px){
+    main {
+        width: calc(100vw - 140px);
+    }
+    main ul{
+        width: calc(100vw - 140px);
+
+    }
+}
+@media screen and (max-width:680px){
+    main ul li div {
+        width: 50px;
+    }
+}
+@media screen and (max-width:460px){
+    main ul{
+        display: none;
+    }
+    main section {
+        padding: 50px 40px;
+    }
+}

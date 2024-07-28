@@ -103,15 +103,24 @@ header{
     font-weight: bold;
 }
 
-.header_right input{
-    width: 60px;
+header section input {
     display: block;
     border: none;
     border-bottom: 1px solid #4B4237; 
     background:none ;
 }
 
-nav ul li a{
+nav ul li a,header section li a{
     color: #4B4237;
-    
+}
+
+
+@media screen and (max-width:950px) {
+    main{
+        padding: 0;
+        margin: 50px;
+    }
+    .menu{
+        display: none;
+    }
 }

@@ -17,7 +17,6 @@ main {
 }
 
 .membership-level {
-    width: 180px;
     padding: 30px 10px;
     box-sizing: border-box;
     background-color: white;
@@ -157,4 +156,59 @@ main {
     background-color: #E5AAA3;
     border: 2px solid #A49694;
     color: white;
+}
+.big_p{display: none;}
+@media screen and (max-width:1150px) {
+    .benefits li {
+        padding: 30px 20px
+    }
+    .membership-level span{
+        display: none;
+    }
+}
+@media screen and (max-width:950px) {
+    .newjoin_event {
+        padding: 60px 70px;
+    }
+    .small_p{
+        display: none;
+    }
+    .big_p{
+        display: inline;
+    }
+    main {
+        padding: 60px 70px;
+    }
+}
+@media screen and (max-width:750px) {
+    .membership-level img{
+        display: none;
+    }
+    .membership-level{
+        width: 20%;
+    }
+    .big_p{
+        display: none;
+    }
+    .benefits{
+        width: 100%;
+    }
+    .benefits li {
+        padding: 5px 5px;
+    }
+    .newjoin_event li {
+        width: 40%;
+    }
+    .newjoin_event ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+@media screen and (max-width:550px) {
+    main {
+        padding: 60px 20px;
+    }
+    .newjoin_event li {
+        width: 80%;
+    }
 }

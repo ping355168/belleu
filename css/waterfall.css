@@ -133,7 +133,7 @@
 
 
 .product a img{
-    width: calc((100vw - 300px - 100px)* 0.25);
+    width: calc((100vw - 300px - 60px)* 0.25);
     height: 40vh;
     object-fit:cover;
     display: flex;;
@@ -151,10 +151,6 @@
 }
 
 
-.function_select{
-    width: 250px;
-    padding:0 30px;
-}
 
 .OOTD_area section{
     display: flex;
@@ -288,4 +284,52 @@
 .product{
     width: calc((100vw - 300px - 60px )* 0.25);
     overflow: visible;
+}
+.OOTD_area section{
+    display: flex;
+    flex-direction: row;
+}
+.secter{
+    width: calc(100vw - 300px);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+@media screen and (max-width:1050px){
+    .OOTD_area section{
+        flex-direction: column;
+    }
+
+    .input{
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
+@media screen and (max-width:750px){  
+.waterfall {
+ 
+    width: calc(100vw - 140px);
+
+}
+.OOTD_area {
+    width: calc(100vw - 140px);
+    margin: 0 auto;
+}
+}
+@media screen and (max-width:550px){  
+    .waterfall{
+        width: calc(100vw - 140px);
+        column-count: 2; 
+    }
+}
+
+
+
+@media screen and (max-width:460px){  
+    .waterfall{
+        column-count: 1; 
+    }
 }

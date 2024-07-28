@@ -42,3 +42,24 @@
 .popular_items img {-o-user-drag: none;
     width: calc((100vw - 300px - 60px) * 0.25);
 }
+
+
+@media screen and (max-width:940px){
+    .product, .popular_items .product a img {
+        width: calc((100vw - 300px - 40px)* 0.333);
+    }
+}
+@media screen and (max-width:750px){
+    .popular_items_area {
+        padding: 60px 70px;
+    }
+    .product, .popular_items .product a img {
+        width: calc((100vw - 140px - 20px)* 0.50);
+    }
+}
+
+@media screen and (max-width:550px){
+    .product, .popular_items .product a img {
+        width: calc(100vw - 140px);
+    }
+}

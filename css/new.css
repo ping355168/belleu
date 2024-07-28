@@ -120,3 +120,23 @@ background-color: rgba(0,0,0,0.8);
     border-radius: 20px;
     font-size: 14px;
 }
+
+@media screen and (max-width:940px){
+    .product, .popular_items .product a img {
+        width: calc((100vw - 300px - 40px)* 0.333);
+    }
+}
+@media screen and (max-width:750px){
+    .popular_items_area {
+        padding: 60px 70px;
+    }
+    .product, .popular_items .product a img {
+        width: calc((100vw - 140px - 20px)* 0.50);
+    }
+}
+
+@media screen and (max-width:550px){
+    .product, .popular_items .product a img {
+        width: calc(100vw - 140px);
+    }
+}

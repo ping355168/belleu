@@ -154,3 +154,10 @@ section ul li a{
 section ul li input{
     border-bottom:1px solid #4B4237;
 }
+@media screen and (max-width:950px) {
+    main {
+        padding: 60px 20px;
+    }
+
+    
+}

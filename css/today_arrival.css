@@ -82,7 +82,12 @@ width: 100vw;
     padding:40px 0;
     box-sizing: border-box;
 }
+#countdown{
+    gap: 40px;
+    display: flex;
+    flex-direction: row;
 
+}
 
 .popular_items img {-o-user-drag: none;
     width: calc((100vw - 300px - 60px) * 0.25);
@@ -92,3 +97,60 @@ width: 100vw;
     overflow: visible;
 }
 
+
+@media screen and (max-width:940px){
+    .product, .popular_items .product a img {
+        width: calc((100vw - 300px - 40px)* 0.333);
+    }
+}
+@media screen and (max-width:750px){
+    .popular_items_area {
+        padding: 60px 70px;
+    }
+    .countdown-container {
+        padding:40px;
+    }
+    #hours,#minutes,#seconds{
+        font-size: 24px;
+    }
+    .countdown-container h1 {
+        margin-bottom: 20px;
+    }
+    .product, .popular_items .product a img {
+        width: calc((100vw - 140px - 20px)* 0.50);
+    }
+}
+
+@media screen and (max-width:550px){
+    .product, .popular_items .product a img {
+        width: calc(100vw - 140px);
+    }
+    .countdown-container {
+        padding:20px;
+    }
+    #hours,#minutes,#seconds{
+        font-size: 20px;
+    }
+    .countdown-container h1 {
+        margin-bottom: 5px;
+        font-size: 18px;
+    }
+    #countdown{
+        gap: 20px;
+    }
+}
+@media screen and (max-width:460px){
+    .countdown-container {
+        padding:15px 10px;
+    }
+    #hours,#minutes,#seconds{
+        font-size: 20px;
+    }
+    .countdown-container h1 {
+        margin-bottom: 5px;
+        font-size: 18px;
+    }
+    #countdown{
+        gap: 10px;
+    }
+}

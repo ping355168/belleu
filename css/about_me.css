@@ -209,3 +209,35 @@ main > h2{
     background-color: #4B4237; 
     color: white; 
 }
+
+@media screen and (max-width: 850px){
+    .introduce {
+        padding: 60px 70px;
+    }
+    main {
+        padding: 60px 70px;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .introduce {
+        padding: 60px 20px;
+    }
+    main {
+        padding: 60px 20px;
+    }
+
+    .left::after, .right::after {
+        display: none;
+    }
+    .timeline::after {
+        display: none;
+    }
+    .container{
+        padding: 0;
+        margin-bottom: 20px;
+    }
+    .container::before {
+        display: none;
+    }
+}
