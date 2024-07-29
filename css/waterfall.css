@@ -177,7 +177,6 @@
     padding: 5px;
 }
 .waterfall{
-    width: calc(100vw - 300px);
     column-count: 3; 
     column-gap: 10px;
 }
