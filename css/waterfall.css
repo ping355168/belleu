@@ -168,6 +168,7 @@
 }
 .function_select label{
     font-size: 16px;
+    text-align: center;
     color: #4B4237;
 
 }
@@ -296,6 +297,11 @@
     justify-content: space-between;
     margin-bottom: 50px;
 }
+.input{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 @media screen and (max-width:1050px){
     .OOTD_area section{
         flex-direction: column;
@@ -318,11 +324,20 @@
     width: calc(100vw - 140px);
     margin: 0 auto;
 }
+    .product a img{
+    width: calc((100vw - 300px - 20px) * 0.50) ;
+    }
+    .product a ,.product {
+        width: calc((100vw - 300px - 20px)* 0.50);
+    }
 }
 @media screen and (max-width:550px){  
     .waterfall{
         width: calc(100vw - 140px);
         column-count: 2; 
+    }
+    .product a ,.product,    .product a img {
+        width: calc(100vw - 300px);
     }
 }
 
@@ -331,5 +346,34 @@
 @media screen and (max-width:460px){  
     .waterfall{
         column-count: 1; 
+        
     }
+    .items_area {
+        padding: 100px 70px;
+    }
+    .product a ,.product,    .product a img {
+        width: calc(100vw - 140px);
+    }
+    .secter {
+        width: calc(100vw - 140px);
+    }
+    .input span{
+        display: none;
+    }
+
+    
+}   .product{
+    background: none;
 }
+
+
+@media screen and (max-width:800px){
+    .OOTD_text_area img  {
+        width: 8vw;
+    }
+  }
+@media screen and (max-width:460px){ 
+    .OOTD_text_area img  {
+        width: 10vw;
+    }
+ }
