@@ -104,7 +104,6 @@ header{
 }
 
 header section input {
-    display: block;
     border: none;
     border-bottom: 1px solid #4B4237; 
     background:none ;
