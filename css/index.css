@@ -321,7 +321,7 @@ iframe{
         padding: 10px 40px;
     }
     .brand_introduction_text_area{
-        width:100vw;
+        width:80vw;
     }
 }
 @media screen and (max-width: 380px){
