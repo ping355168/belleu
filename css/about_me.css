@@ -219,14 +219,15 @@ main > h2{
     }
 }
 
-@media screen and (max-width: 400px){
+@media screen and (max-width: 500px){
     .introduce {
         padding: 60px 20px;
     }
     main {
         padding: 60px 20px;
     }
-
+}
+@media screen and (max-width: 400px){
     .left::after, .right::after {
         display: none;
     }
