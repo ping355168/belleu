@@ -732,6 +732,9 @@ section ul li:first-child{
         width: calc((100vw - 140px - 20px) * 0.50);
 
     }
+    .floating-window{
+        display: none;
+    }
 }
 
 @media screen and (max-width: 590px) {
@@ -743,6 +746,7 @@ section ul li:first-child{
         text-align: center;
         width: 50%;
     }
+
 }
 @media screen and (max-width: 550px) {
 
